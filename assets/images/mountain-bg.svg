@@ -1,0 +1,20 @@
+<svg width="1200" height="200" viewBox="0 0 1200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e0f2fe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b3e5fc;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="mountainGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4caf50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2e7d32;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Sky background -->
+  <rect width="1200" height="200" fill="url(#skyGradient)"/>
+  
+  <!-- Mountains -->
+  <path d="M0 140 C200 120, 400 100, 600 120 C800 140, 1000 100, 1200 120 L1200 200 L0 200 Z" fill="url(#mountainGradient)" opacity="0.8"/>
+  <path d="M0 160 C300 140, 600 130, 900 150 C1050 160, 1150 140, 1200 150 L1200 200 L0 200 Z" fill="url(#mountainGradient)" opacity="0.6"/>
+  <path d="M0 180 C400 160, 800 170, 1200 165 L1200 200 L0 200 Z" fill="url(#mountainGradient)" opacity="0.4"/>
+</svg>

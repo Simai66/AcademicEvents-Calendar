@@ -1,0 +1,26 @@
+/* Footer */
+.footer {
+    background-color: var(--primary-pink);
+    color: var(--text-dark);
+    padding: 2rem;
+    grid-column: 1 / -1;
+    grid-row: 2;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-left h4 {
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+}
+
+.footer-left p,
+.footer-right p {
+    margin-bottom: 0.25rem;
+}

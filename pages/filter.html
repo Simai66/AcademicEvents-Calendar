@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ตัวกรอง - CARLENDAR | SSRU</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <img src="../assets/images/university-logo.svg" alt="โลโก้มหาวิทยาลัยราชภัฏสวนสุนันทา" width="56"
+                        height="56">
+                </div>
+                <h1 class="brand-name">CARLENDAR</h1>
+            </div>
+
+            <nav class="sidebar-nav" aria-label="เมนูหลัก">
+                <a href="home.html" class="nav-item" aria-label="หน้าแรก">
+                    <span class="nav-icon">🏠</span>
+                    <span>หน้าแรก</span>
+                </a>
+                <a href="category.html" class="nav-item" aria-label="หมวดหมู่">
+                    <span class="nav-icon">📂</span>
+                    <span>หมวดหมู่</span>
+                </a>
+                <a href="list.html" class="nav-item" aria-label="รายการ">
+                    <span class="nav-icon">📋</span>
+                    <span>รายการ</span>
+                </a>
+                <a href="filter.html" class="nav-item active" aria-label="ตัวกรอง">
+                    <span class="nav-icon">🔍</span>
+                    <span>ตัวกรอง</span>
+                </a>
+                <a href="detail.html" class="nav-item" aria-label="รายละเอียด">
+                    <span class="nav-icon">📄</span>
+                    <span>รายละเอียด</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h2>ปฏิทินการศึกษาและกิจกรรม</h2>
+                    <p>Suan Sunandha Rajabhat University</p>
+                </div>
+            </section>
+
+            <!-- Calendar Container -->
+            <section class="calendar-container">
+                <div class="filter-controls">
+                    <h3>เลือกหมวดหมู่</h3>
+                    <div class="filter-options">
+                        <a href="#" class="filter-option active" onclick="toggleFilter(this, 'academic')">
+                            <span class="checkbox-custom"></span>
+                            การศึกษา
+                        </a>
+                        <a href="#" class="filter-option active" onclick="toggleFilter(this, 'student')">
+                            <span class="checkbox-custom"></span>
+                            กิจกรรมนักศึกษา
+                        </a>
+                        <a href="#" class="filter-option active" onclick="toggleFilter(this, 'holiday')">
+                            <span class="checkbox-custom"></span>
+                            วันหยุด
+                        </a>
+                        <a href="#" class="filter-option active" onclick="toggleFilter(this, 'training')">
+                            <span class="checkbox-custom"></span>
+                            อบรม/สัมมนา
+                        </a>
+                        <a href="#" class="filter-option active" onclick="toggleFilter(this, 'sports')">
+                            <span class="checkbox-custom"></span>
+                            กีฬา/วัฒนธรรม
+                        </a>
+                    </div>
+                </div>
+
+                <div class="filtered-events">
+                    <article class="event-card cat-academic event" data-category="academic">
+                        <div class="event-date">วัน 15 มกราคม 2568</div>
+                        <div class="event-details">รายละเอียด: วันเปิดเทอมภาคเรียนที่ 2/2567</div>
+                        <div class="event-category academic">การศึกษา</div>
+                    </article>
+                    <article class="event-card cat-student event" data-category="student">
+                        <div class="event-date">วัน 28 มกราคม 2568</div>
+                        <div class="event-details">รายละเอียด: วันกีฬามหาวิทยาลัย</div>
+                        <div class="event-category student">กิจกรรมนักศึกษา</div>
+                    </article>
+                    <article class="event-card cat-holiday event" data-category="holiday">
+                        <div class="event-date">วัน 24 กุมภาพันธ์ 2568</div>
+                        <div class="event-details">รายละเอียด: วันมาฆบูชา</div>
+                        <div class="event-category holiday">วันหยุด</div>
+                    </article>
+                    <article class="event-card cat-training event" data-category="training">
+                        <div class="event-date">วัน 10 มีนาคม 2568</div>
+                        <div class="event-details">รายละเอียด: อบรมทักษะความเป็นผู้นำ</div>
+                        <div class="event-category training">อบรม/สัมมนา</div>
+                    </article>
+                    <article class="event-card cat-sports event" data-category="sports">
+                        <div class="event-date">วัน 25 เมษายน 2568</div>
+                        <div class="event-details">รายละเอียด: วันกีฬาสี</div>
+                        <div class="event-category sports">กีฬา/วัฒนธรรม</div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h4>SUAN SUNANDHA RAJABHAT UNIVERSITY</h4>
+                    <p>1 U-Thong nok Road, Dusit, Bangkok 10300 Thailand</p>
+                </div>
+                <div class="footer-right">
+                    <p>Tel : 02-160-1023</p>
+                    <p>Fax : 02-160-1010</p>
+                    <p>Email : saraban@ssru.ac.th</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Mobile Responsive Sidebar Toggle -->
+    <details class="mobile-nav">
+        <summary class="mobile-nav-toggle">☰ เมนู</summary>
+        <nav class="mobile-nav-content" aria-label="เมนูมือถือ">
+            <a href="home.html" class="nav-item">🏠 หน้าแรก</a>
+            <a href="category.html" class="nav-item">📂 หมวดหมู่</a>
+            <a href="list.html" class="nav-item">📋 รายการ</a>
+            <a href="filter.html" class="nav-item">🔍 ตัวกรอง</a>
+            <a href="detail.html" class="nav-item">📄 รายละเอียด</a>
+        </nav>
+    </details>
+
+    <script>
+        function toggleFilter(element, category) {
+            event.preventDefault();
+            element.classList.toggle('active');
+
+            const events = document.querySelectorAll(`[data-category="${category}"]`);
+            events.forEach(event => {
+                if (element.classList.contains('active')) {
+                    event.style.display = 'block';
+                } else {
+                    event.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

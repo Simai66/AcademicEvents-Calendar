@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CARLENDAR - ปฏิทินการศึกษา | SSRU</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        .welcome-container {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #e0f2fe 0%, #b3e5fc 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .welcome-card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .welcome-logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 2rem;
+        }
+
+        .welcome-title {
+            color: var(--primary-pink);
+            font-family: 'Inter', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: 0.05em;
+        }
+
+        .welcome-subtitle {
+            color: var(--text-dark);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .welcome-description {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+            line-height: 1.6;
+        }
+
+        .welcome-button {
+            display: inline-block;
+            background-color: var(--primary-pink);
+            color: var(--white);
+            padding: 1rem 3rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .welcome-button:hover {
+            background-color: #e55a9a;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(240, 111, 170, 0.3);
+        }
+
+        .footer-minimal {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: var(--primary-pink);
+            padding: 1rem;
+            text-align: center;
+            color: var(--text-dark);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .welcome-title {
+                font-size: 2rem;
+            }
+
+            .welcome-card {
+                margin: 1rem;
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="welcome-container">
+        <div class="welcome-card">
+            <div class="welcome-logo">
+                <img src="assets/images/university-logo.svg" alt="โลโก้มหาวิทยาลัยราชภัฏสวนสุนันทา" width="80"
+                    height="80">
+            </div>
+
+            <h1 class="welcome-title">CARLENDAR</h1>
+            <h2 class="welcome-subtitle">ปฏิทินการศึกษาและกิจกรรม</h2>
+            <p class="welcome-description">
+                ระบบปฏิทินออนไลน์สำหรับติดตามกิจกรรมการศึกษา กิจกรรมนักศึกษา และข่าวสารต่างๆ
+                ของมหาวิทยาลัยราชภัฏสวนสุนันทา
+            </p>
+
+            <a href="pages/home.html" class="welcome-button">
+                🗓️ เข้าสู่ปฏิทิน
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer-minimal">
+        <p>© 2025 Suan Sunandha Rajabhat University | พัฒนาโดยทีม CARLENDAR</p>
+    </footer>
+</body>
+
+</html>

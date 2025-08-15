@@ -1,0 +1,109 @@
+/* Calendar Styles */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.year-selector,
+.month-selector {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.year-btn,
+.month-btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--white);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+.year-btn:hover,
+.month-btn:hover {
+    border-color: var(--primary-pink);
+    background-color: var(--primary-pink);
+    color: var(--white);
+}
+
+.year-btn.active,
+.month-btn.active {
+    background-color: var(--primary-pink);
+    border-color: var(--primary-pink);
+    color: var(--white);
+}
+
+.month-title {
+    font-size: 24px;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+/* Calendar Grid */
+.calendar-grid {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.weekday-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background-color: var(--secondary-blue);
+    color: var(--white);
+}
+
+.weekday {
+    padding: 1rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.day-cell {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+    position: relative;
+}
+
+.day-cell:hover {
+    background-color: var(--light-gray);
+}
+
+.day-cell.other-month {
+    color: var(--text-gray);
+    background-color: #fafafa;
+}
+
+.day-cell.event-day {
+    background-color: var(--primary-pink);
+    color: var(--white);
+    border-radius: 12px;
+    margin: 4px;
+    font-weight: 600;
+}
+
+.day-cell.event-day:hover {
+    transform: scale(1.05);
+}

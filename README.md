@@ -1,52 +1,107 @@
-# AcademicEvents-Calendar
+# CARLENDAR - ปฏิทินการศึกษาและกิจกรรม
 
-A static website for displaying academic events calendar for Suan Sunandha Rajabhat University.
+เว็บไซต์ปฏิทินการศึกษาและกิจกรรมสำหรับมหาวิทยาลัยเทคโนโลยีราชมงคลธัญบุรี
 
-## Features
+## คุณสมบัติหลัก
 
-- Monthly calendar view
-- Event listings by category
-- Event listings by month
-- Simple static design (no JavaScript required)
-- Mobile responsive
+### 🎯 การสลับมุมมอง
+- **หน้าแรก**: ปฏิทินแบบตาราง พร้อมเลือกปีและเดือน
+- **หมวดหมู่**: จัดกลุ่มกิจกรรมตามประเภท
+- **รายการ**: แสดงกิจกรรมเรียงตามเดือน
+- **ตัวกรอง**: กรองกิจกรรมตามหมวดหมู่
+- **รายละเอียด**: ข้อมูลครบถ้วนของกิจกรรม
 
-## Structure
+### 📅 ระบบปฏิทิน
+- เลือกปี: 2566, 2567, 2568
+- เลือกเดือน: มกราคม - ธันวาคม
+- แสดงวันที่มีกิจกรรมพิเศษ
+- ปุ่มดาวน์โหลดไฟล์ .ics เพื่อเพิ่มลงปฏิทินส่วนตัว
 
-### HTML Files
+### 🎨 หมวดหมู่กิจกรรม
+- **การศึกษา** (สีน้ำเงิน #3f458d)
+- **กิจกรรมนักศึกษา** (สีเขียว #2e8b57)
+- **วันหยุด** (สีส้ม #ff8c42)
+- **อบรม/สัมมนา** (สีม่วง #9b59b6)
+- **กีฬา/วัฒนธรรม** (สีแดง #e74c3c)
 
-- `index.html` - Home page with monthly calendar view
-- `categories.html` - Events categorized by type
-- `events.html` - List of all events
-- `filters.html` - Event filtering options
-- `details.html` - Detailed event information by month
-- `download.html` - Downloads for calendars and forms
-- `monthly-calendar.html` - Detailed monthly calendar view with events
-- `multi-month.html` - View multiple months at once
-- `yearly-view.html` - Year overview with links to monthly views
+### 📱 Responsive Design
+- **Desktop**: Sidebar ซ้าย (260px) + เนื้อหาขวา
+- **Tablet**: Sidebar แคบลง (220px)
+- **Mobile**: เมนูแบบ hamburger ด้านบน
 
-### CSS Files
+## โครงสร้างไฟล์
 
-- `css/` - Contains stylesheet files
-  - `common.css` - Common styles for all pages (layout, sidebar, header, footer)
-  - `calendar.css` - Styles specific to the calendar view
-  - `events.css` - Styles for event listings and filters
+```
+/
+├── index.html                 # หน้าเดียวรวมทุกมุมมอง
+├── assets/
+│   ├── css/
+│   │   └── style.css         # สไตล์หลัก
+│   ├── images/
+│   │   ├── university-logo.svg   # โลโก้มหาวิทยาลัย
+│   │   └── mountain-bg.svg       # ภาพพื้นหลังภูเขา
+│   └── files/
+│       └── ics/
+│           └── event-sample.ics  # ไฟล์ปฏิทินตัวอย่าง
+└── README.md                 # คู่มือนี้
+```
 
-### Image Assets
+## เทคโนโลยีที่ใช้
 
-- `images/` - Contains image assets
-  - `header-hills.png` - Header decoration
-  - `SSRU_LOGO1.png` - University logo
+- **HTML5**: Semantic markup, accessibility
+- **CSS3**: Grid, Flexbox, Custom Properties
+- **Fonts**: Sarabun (ไทย), Inter (อังกฤษ)
+- **ไม่ใช้ JavaScript**: ใช้ CSS-only interactions
 
-## Usage
+## วิธีใช้งาน
 
-Simply open the `index.html` file in a web browser to view the calendar. The website is static and doesn't require any server-side processing.
+1. เปิดไฟล์ `index.html` ในเบราว์เซอร์
+2. เลือกมุมมองจาก Sidebar ซ้าย (หรือเมนู hamburger บนมือถือ)
+3. เลือกปีและเดือนในหน้าแรก
+4. ใช้ตัวกรองในหน้าตัวกรองเพื่อแสดงเฉพาะหมวดหมู่ที่ต้องการ
+5. คลิกปุ่ม "เพิ่มลงปฏิทิน" เพื่อดาวน์โหลดไฟล์ .ics
 
-## Navigation
+## การปรับแต่ง
 
-- หน้าแรก (Home) - Shows the monthly calendar view
-- หมวดหมู่ (Categories) - Doesn't have active functionality in current version
-- รายการ (Events) - Shows events by categories
-- ข้อกรอง (Filters) - Doesn't have active functionality in current version
-- รายละเอียด (Details) - Shows events by month
-- ดาวน์โหลด (Download) - Doesn't have active functionality in current version
+### เปลี่ยนสีธีม
+แก้ไขตัวแปรใน `:root` ของไฟล์ `style.css`:
+
+```css
+:root {
+    --primary-pink: #f06faa;      /* สีหลัก */
+    --secondary-blue: #3f458d;    /* สีรอง */
+    --background: #f9fafb;        /* พื้นหลัง */
+}
+```
+
+### เพิ่มกิจกรรม
+แก้ไข HTML ในส่วน view ต่างๆ และเพิ่ม class หมวดหมู่:
+
+```html
+<article class="event-card cat-academic event">
+    <div class="event-date">วัน 15 มกราคม 2568</div>
+    <div class="event-details">รายละเอียด: วันเปิดเทอมภาคเรียนที่ 2/2567</div>
+    <div class="event-category academic">การศึกษา</div>
+</article>
+```
+
+### เพิ่มปี/เดือนใหม่
+เพิ่ม radio input และ label ที่เกี่ยวข้องใน HTML และ CSS
+
+## Accessibility Features
+
+- ✅ Semantic HTML5 elements
+- ✅ ARIA labels สำหรับ navigation
+- ✅ Alt text สำหรับรูปภาพ
+- ✅ Focus indicators
+- ✅ High contrast mode support
+- ✅ Reduced motion support
+- ✅ Keyboard navigation
+
+## Browser Support
+
+- Chrome 90+
+- Firefox 88+
+- Safari 14+
+- Edge 90+
 

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รายละเอียด - CARLENDAR | SSRU</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <img src="../assets/images/university-logo.svg" alt="โลโก้มหาวิทยาลัยราชภัฏสวนสุนันทา" width="56"
+                        height="56">
+                </div>
+                <h1 class="brand-name">CARLENDAR</h1>
+            </div>
+
+            <nav class="sidebar-nav" aria-label="เมนูหลัก">
+                <a href="home.html" class="nav-item" aria-label="หน้าแรก">
+                    <span class="nav-icon">🏠</span>
+                    <span>หน้าแรก</span>
+                </a>
+                <a href="category.html" class="nav-item" aria-label="หมวดหมู่">
+                    <span class="nav-icon">📂</span>
+                    <span>หมวดหมู่</span>
+                </a>
+                <a href="list.html" class="nav-item" aria-label="รายการ">
+                    <span class="nav-icon">📋</span>
+                    <span>รายการ</span>
+                </a>
+                <a href="filter.html" class="nav-item" aria-label="ตัวกรอง">
+                    <span class="nav-icon">🔍</span>
+                    <span>ตัวกรอง</span>
+                </a>
+                <a href="detail.html" class="nav-item active" aria-label="รายละเอียด">
+                    <span class="nav-icon">📄</span>
+                    <span>รายละเอียด</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h2>ปฏิทินการศึกษาและกิจกรรม</h2>
+                    <p>Suan Sunandha Rajabhat University</p>
+                </div>
+            </section>
+
+            <!-- Calendar Container -->
+            <section class="calendar-container">
+                <div class="event-detail">
+                    <h3>รายละเอียดกิจกรรม</h3>
+                    <div class="detail-card">
+                        <h4>วันเปิดเทอมภาคเรียนที่ 2/2567</h4>
+                        <div class="detail-info">
+                            <div class="info-item">
+                                <strong>วันที่:</strong> 15 มกราคม 2568
+                            </div>
+                            <div class="info-item">
+                                <strong>เวลา:</strong> 08:00 - 17:00 น.
+                            </div>
+                            <div class="info-item">
+                                <strong>สถานที่:</strong> อาคารเรียนรวม มหาวิทยาลัยราชภัฏสวนสุนันทา
+                            </div>
+                            <div class="info-item">
+                                <strong>รายละเอียด:</strong> วันเปิดภาคเรียนที่ 2 ประจำปีการศึกษา 2567
+                                นักศึกษาทุกชั้นปีต้องเข้าร่วมกิจกรรมปฐมนิเทศและลงทะเบียนเรียน
+                            </div>
+                            <div class="info-item">
+                                <strong>หมวดหมู่:</strong> <span class="event-category academic">การศึกษา</span>
+                            </div>
+                        </div>
+                        <div class="detail-actions">
+                            <a href="../assets/files/ics/event-sample.ics" class="add-calendar-btn" download>
+                                📅 เพิ่มลงปฏิทิน
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Additional Event Details -->
+                    <div class="detail-card detail-card-secondary">
+                        <h4>วันกีฬามหาวิทยาลัย</h4>
+                        <div class="detail-info">
+                            <div class="info-item">
+                                <strong>วันที่:</strong> 28 มกราคม 2568
+                            </div>
+                            <div class="info-item">
+                                <strong>เวลา:</strong> 08:00 - 16:00 น.
+                            </div>
+                            <div class="info-item">
+                                <strong>สถานที่:</strong> สนามกีฬา มหาวิทยาลัยราชภัฏสวนสุนันทา
+                            </div>
+                            <div class="info-item">
+                                <strong>รายละเอียด:</strong> การแข่งขันกีฬาประจำปี มีการแข่งขันกีฬาหลากหลายประเภท
+                                เพื่อส่งเสริมสุขภาพและสร้างความสามัคคีระหว่างนักศึกษา
+                            </div>
+                            <div class="info-item">
+                                <strong>หมวดหมู่:</strong> <span class="event-category student">กิจกรรมนักศึกษา</span>
+                            </div>
+                        </div>
+                        <div class="detail-actions">
+                            <a href="../assets/files/ics/event-sample.ics" class="add-calendar-btn" download>
+                                📅 เพิ่มลงปฏิทิน
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h4>SUAN SUNANDHA RAJABHAT UNIVERSITY</h4>
+                    <p>1 U-Thong nok Road, Dusit, Bangkok 10300 Thailand</p>
+                </div>
+                <div class="footer-right">
+                    <p>Tel : 02-160-1023</p>
+                    <p>Fax : 02-160-1010</p>
+                    <p>Email : saraban@ssru.ac.th</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Mobile Responsive Sidebar Toggle -->
+    <details class="mobile-nav">
+        <summary class="mobile-nav-toggle">☰ เมนู</summary>
+        <nav class="mobile-nav-content" aria-label="เมนูมือถือ">
+            <a href="home.html" class="nav-item">🏠 หน้าแรก</a>
+            <a href="category.html" class="nav-item">📂 หมวดหมู่</a>
+            <a href="list.html" class="nav-item">📋 รายการ</a>
+            <a href="filter.html" class="nav-item">🔍 ตัวกรอง</a>
+            <a href="detail.html" class="nav-item">📄 รายละเอียด</a>
+        </nav>
+    </details>
+</body>
+
+</html>

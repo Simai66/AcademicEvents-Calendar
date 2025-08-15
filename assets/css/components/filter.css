@@ -1,0 +1,67 @@
+/* Filter Controls */
+.filter-controls {
+    margin-bottom: 2rem;
+}
+
+.filter-controls h3 {
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.filter-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+.filter-option:hover {
+    background-color: var(--light-gray);
+}
+
+.filter-option.active {
+    background-color: var(--primary-pink);
+    border-color: var(--primary-pink);
+    color: var(--white);
+}
+
+.checkbox-custom {
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.filter-option.active .checkbox-custom {
+    background-color: var(--white);
+    border-color: var(--white);
+}
+
+.filter-option.active .checkbox-custom::after {
+    content: '✓';
+    color: var(--primary-pink);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.filtered-events {
+    display: grid;
+    gap: 1rem;
+}

@@ -1,0 +1,109 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-pink: #f06faa;
+    --secondary-blue: #3f458d;
+    --background: #f9fafb;
+    --border-color: #e5e7eb;
+    --text-dark: #1f2937;
+    --text-gray: #6b7280;
+    --white: #ffffff;
+    --light-gray: #f3f4f6;
+    --category-academic: #3f458d;
+    --category-student: #2e8b57;
+    --category-holiday: #ff8c42;
+    --category-training: #9b59b6;
+    --category-sports: #e74c3c;
+}
+
+body {
+    font-family: 'Sarabun', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background);
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+.brand-name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+/* App Container */
+.app-container {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
+}
+
+/* Focus Styles for Accessibility */
+button:focus,
+label:focus,
+a:focus,
+input:focus,
+.nav-item:focus,
+.year-btn:focus,
+.month-btn:focus,
+.filter-option:focus {
+    outline: 2px solid var(--secondary-blue);
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .event-card {
+        border-width: 2px;
+    }
+
+    .day-cell {
+        border-width: 2px;
+    }
+
+    .event-category {
+        border: 1px solid var(--white);
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -1,0 +1,65 @@
+/* Detail View */
+.event-detail {
+    max-width: 800px;
+}
+
+.detail-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.detail-card-secondary {
+    margin-top: 2rem;
+}
+
+.detail-card h4 {
+    font-size: 24px;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--primary-pink);
+    padding-bottom: 0.5rem;
+}
+
+.detail-info {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.info-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 1rem;
+    align-items: start;
+}
+
+.info-item strong {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.detail-actions {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.add-calendar-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background-color: var(--primary-pink);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.add-calendar-btn:hover {
+    background-color: #e55a9a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(240, 111, 170, 0.3);
+}

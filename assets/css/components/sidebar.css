@@ -1,0 +1,68 @@
+/* Sidebar Styles */
+.sidebar {
+    background-color: var(--primary-pink);
+    padding: 1.5rem;
+    grid-column: 1;
+    grid-row: 1 / -1;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    display: block;
+}
+
+.brand-name {
+    color: var(--text-dark);
+    font-size: 24px;
+    margin: 0;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--text-dark);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-item:focus {
+    outline: 2px solid var(--white);
+    outline-offset: 2px;
+}
+
+.nav-item.active {
+    background-color: var(--white);
+    color: var(--primary-pink);
+}
+
+.nav-icon {
+    font-size: 18px;
+}
