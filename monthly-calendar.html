@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CALENDAR - Suan Sunandha Rajabhat University</title>
+    <title>ปฏิทินรายเดือน - CALENDAR - Suan Sunandha Rajabhat University</title>
     <!-- Thai font -->
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;600;700<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;700&display=swap" rel="stylesheet">display=swap" rel="stylesheet">
     <!-- External CSS -->
     <link href="css/common.css" rel="stylesheet">
     <link href="css/calendar.css" rel="stylesheet">
@@ -21,11 +21,12 @@
                 <div class="logo-text">CALENDAR</div>
             </div>
             <ul class="nav-menu">
-                <li class="nav-item active"><a href="index.html">หน้าแรก</a></li>
+                <li class="nav-item"><a href="index.html">หน้าแรก</a></li>
                 <li class="nav-item"><a href="categories.html">หมวดหมู่</a></li>
                 <li class="nav-item"><a href="events.html">รายการ</a></li>
                 <li class="nav-item"><a href="filters.html">ข้อกรอง</a></li>
                 <li class="nav-item"><a href="details.html">รายละเอียด</a></li>
+                
             </ul>
         </div>
 
@@ -63,17 +64,12 @@
                         </select>
                     </div>
                     <div class="calendar-nav">
-                        <button class="calendar-nav-button" id="prev-month">&lt;</button>
-                        <button class="calendar-nav-button" id="next-month">&gt;</button>
+                        <button type="button" class="calendar-nav-button" id="prev-month">&lt;</button>
+                        <button type="button" class="calendar-nav-button" id="next-month">&gt;</button>
                     </div>
                 </div>
 
                 <h1 class="section-title">เดือนสิงหาคม 2568</h1>
-                <div class="calendar-view-options">
-                    <a href="monthly-calendar.html" class="calendar-view-option">มุมมองรายเดือน</a>
-                    <a href="multi-month.html" class="calendar-view-option">มุมมองหลายเดือน</a>
-                    <a href="yearly-view.html" class="calendar-view-option">มุมมองรายปี</a>
-                </div>
                 <div class="calendar-container">
                     <div class="days-header">
                         <div>อา</div>
@@ -85,7 +81,6 @@
                         <div>ส</div>
                     </div>
                     <div class="calendar-grid">
-                        <!-- Generate calendar days -->
                         <!-- Week 1 -->
                         <div class="calendar-day"></div>
                         <div class="calendar-day"></div>
@@ -93,31 +88,31 @@
                         <div class="calendar-day">1</div>
                         <div class="calendar-day">2</div>
                         <div class="calendar-day">3</div>
-                        <div class="calendar-day">4</div>
+                        <div class="calendar-day has-events">4</div>
                         <!-- Week 2 -->
-                        <div class="calendar-day">5</div>
+                        <div class="calendar-day has-events">5</div>
                         <div class="calendar-day">6</div>
                         <div class="calendar-day">7</div>
-                        <div class="calendar-day">8</div>
+                        <div class="calendar-day has-events">8</div>
                         <div class="calendar-day">9</div>
                         <div class="calendar-day">10</div>
                         <div class="calendar-day">11</div>
                         <!-- Week 3 -->
-                        <div class="calendar-day">12</div>
+                        <div class="calendar-day has-events">12</div>
                         <div class="calendar-day">13</div>
                         <div class="calendar-day">14</div>
-                        <div class="calendar-day">15</div>
+                        <div class="calendar-day current-day">15</div>
                         <div class="calendar-day">16</div>
                         <div class="calendar-day">17</div>
                         <div class="calendar-day">18</div>
                         <!-- Week 4 -->
                         <div class="calendar-day">19</div>
-                        <div class="calendar-day">20</div>
+                        <div class="calendar-day has-events">20</div>
                         <div class="calendar-day">21</div>
                         <div class="calendar-day">22</div>
                         <div class="calendar-day">23</div>
                         <div class="calendar-day">24</div>
-                        <div class="calendar-day">25</div>
+                        <div class="calendar-day has-events">25</div>
                         <!-- Week 5 -->
                         <div class="calendar-day">26</div>
                         <div class="calendar-day">27</div>
@@ -128,53 +123,49 @@
                         <div class="calendar-day"></div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Events View -->
-            <div class="content-container" id="events-view" style="display:none;">
-                <h1 class="section-title">การศึกษา</h1>
                 <div class="events-list">
+                    <h2>กิจกรรมในเดือนนี้</h2>
                     <div class="event-item">
-                        <div class="event-date">วันที่ 5 สิงหาคม รายละเอียด กิจกรรมวิชาการ</div>
+                        <div class="event-date">วันที่ 5 สิงหาคม 2568</div>
+                        <div class="event-title">การสัมมนาวิชาการประจำปี</div>
+                        <div class="event-description">การสัมมนาวิชาการด้านนวัตกรรมการศึกษา จัดโดยคณะครุศาสตร์</div>
+                        <div class="event-category category-academic">วิชาการ</div>
                     </div>
-                    <div class="event-item">
-                        <div class="event-date">วันที่ 10 สิงหาคม รายละเอียด กิจกรรมวิชาการ</div>
-                    </div>
-                    <div class="event-item">
-                        <div class="event-date">วันที่ 15 สิงหาคม รายละเอียด กิจกรรมวิชาการ</div>
-                    </div>
-                </div>
 
-                <h1 class="section-title">กิจกรรมนักศึกษา</h1>
-                <div class="events-list">
                     <div class="event-item">
-                        <div class="event-date">วันที่ 8 สิงหาคม รายละเอียด กิจกรรมนักศึกษา</div>
+                        <div class="event-date">วันที่ 8 สิงหาคม 2568</div>
+                        <div class="event-title">กิจกรรมรับน้องใหม่</div>
+                        <div class="event-description">พิธีรับน้องใหม่ประจำปีการศึกษา 2568</div>
+                        <div class="event-category category-student">กิจกรรมนักศึกษา</div>
                     </div>
-                    <div class="event-item">
-                        <div class="event-date">วันที่ 20 สิงหาคม รายละเอียด กิจกรรมนักศึกษา</div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Monthly Events View -->
-            <div class="content-container" id="monthly-events-view" style="display:none;">
-                <h1 class="section-title">เดือนสิงหาคม</h1>
-                <div class="events-list">
                     <div class="event-item">
-                        <div class="event-date">วันที่ 5 สิงหาคม รายละเอียด กิจกรรมวิชาการ</div>
+                        <div class="event-date">วันที่ 12 สิงหาคม 2568</div>
+                        <div class="event-title">วันแม่แห่งชาติ</div>
+                        <div class="event-description">พิธีถวายพระพรเนื่องในวันแม่แห่งชาติ</div>
+                        <div class="event-category category-admin">บุคลากร</div>
                     </div>
-                    <div class="event-item">
-                        <div class="event-date">วันที่ 8 สิงหาคม รายละเอียด กิจกรรมนักศึกษา</div>
-                    </div>
-                </div>
 
-                <h1 class="section-title">เดือนกันยายน</h1>
-                <div class="events-list">
                     <div class="event-item">
-                        <div class="event-date">วันที่ 3 กันยายน รายละเอียด กิจกรรมวิชาการ</div>
+                        <div class="event-date">วันที่ 15 สิงหาคม 2568</div>
+                        <div class="event-title">การอบรมเชิงปฏิบัติการ</div>
+                        <div class="event-description">การอบรมเชิงปฏิบัติการด้านการวิจัย สำหรับคณาจารย์</div>
+                        <div class="event-category category-academic">วิชาการ</div>
                     </div>
+
                     <div class="event-item">
-                        <div class="event-date">วันที่ 12 กันยายน รายละเอียด กิจกรรมนักศึกษา</div>
+                        <div class="event-date">วันที่ 20 สิงหาคม 2568</div>
+                        <div class="event-title">แข่งขันกีฬาสี</div>
+                        <div class="event-description">การแข่งขันกีฬาสีประจำปีการศึกษา 2568</div>
+                        <div class="event-category category-student">กิจกรรมนักศึกษา</div>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-date">วันที่ 25 สิงหาคม 2568</div>
+                        <div class="event-title">ประชุมบุคลากรประจำเดือน</div>
+                        <div class="event-description">การประชุมบุคลากรประจำเดือนสิงหาคม 2568</div>
+                        <div class="event-category category-admin">บุคลากร</div>
                     </div>
                 </div>
             </div>
@@ -183,8 +174,8 @@
                 <div class="university-info">SUAN SUNANDHA RAJABHAT UNIVERSITY CALENDER</div>
                 <div class="address">1 U-Thong nok Road, Dusit, Bangkok 10300 Thailand</div>
                 <div class="contact-info">
-                    <div class="contact-email">Email : s6612250083@ssru.ac.th</div>
-                    <div class="contact-email">Email : s56612250099@ssru.ac.th</div>
+                    <div class="contact-email">Email : 56612250083@ssru.ac.th</div>
+                    <div class="contact-email">Email : 56612250099@ssru.ac.th</div>
                 </div>
             </div>
         </div>

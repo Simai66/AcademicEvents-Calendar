@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sarabun', sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 180px;
+    background-color: #f5a9d0;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 5px;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+}
+
+.nav-menu {
+    width: 100%;
+    list-style: none;
+}
+
+.nav-item {
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #000;
+    text-align: left;
+    width: 100%;
+}
+
+.nav-item:hover {
+    background-color: #f385bc;
+}
+
+.main-content {
+    flex: 1;
+    background-color: #fff;
+    position: relative;
+}
+
+.header-decoration {
+    height: 120px;
+    background-image: url('../images/header-hills.png');
+    background-repeat: repeat-x;
+    background-size: contain;
+    width: 100%;
+}
+
+.content-container {
+    padding: 20px;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding: 5px 0;
+}
+
+.calendar-container {
+    background-color: #e0e0e0;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.days-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-day {
+    height: 70px;
+    background-color: #f5a9d0;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.events-list {
+    margin-top: 30px;
+}
+
+.event-item {
+    background-color: #f5a9d0;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.footer {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.university-info {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-email {
+    margin: 0 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-item {
+        width: auto;
+    }
+}
+
+/* Add some simple interactivity without JavaScript */
+.nav-item:nth-child(1):hover~.main-content #calendar-view {
+    display: block !important;
+}
+
+.nav-item:nth-child(1):hover~.main-content #events-view,
+.nav-item:nth-child(1):hover~.main-content #monthly-events-view {
+    display: none !important;
+}
+
+.nav-item:nth-child(3):hover~.main-content #events-view {
+    display: block !important;
+}
+
+.nav-item:nth-child(3):hover~.main-content #calendar-view,
+.nav-item:nth-child(3):hover~.main-content #monthly-events-view {
+    display: none !important;
+}
+
+.nav-item:nth-child(5):hover~.main-content #monthly-events-view {
+    display: block !important;
+}
+
+.nav-item:nth-child(5):hover~.main-content #calendar-view,
+.nav-item:nth-child(5):hover~.main-content #events-view {
+    display: none !important;
+}
