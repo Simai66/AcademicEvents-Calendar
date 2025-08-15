@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --primary-pink: #f06faa;
     --secondary-blue: #3f458d;
@@ -162,6 +166,35 @@ h4 {
 }
 
 .nav-item:focus {
+    outline: 2px solid var(--white);
+    outline-offset: 2px;
+}
+
+/* Sub Navigation Styles */
+.sub-nav {
+    margin-top: 15px;
+    padding-left: 15px;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.sub-nav a {
+    display: block;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    padding: 8px 12px;
+    margin: 4px 0;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.sub-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    transform: translateX(5px);
+}
+
+.sub-nav a:focus {
     outline: 2px solid var(--white);
     outline-offset: 2px;
 }

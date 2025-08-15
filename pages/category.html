@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>หมวดหมู่ - CALENDAR | SSRU</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -15,6 +16,7 @@
 
 <body>
     <div class="app-container">
+        <!-- Sidebar -->
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="sidebar-header">
@@ -34,6 +36,11 @@
                     <span class="nav-icon">📂</span>
                     <span>หมวดหมู่</span>
                 </a>
+                <div class="sub-nav">
+                    <a href="#academic-section">📚 การศึกษา</a>
+                    <a href="#sports-section">🏆 กีฬา/วัฒนธรรม</a>
+                    <a href="#holiday-section">🎉 วันหยุด</a>
+                </div>
                 <a href="list.html" class="nav-item" aria-label="รายการ">
                     <span class="nav-icon">📋</span>
                     <span>รายการ</span>
@@ -43,6 +50,8 @@
                     <span>ตัวกรอง</span>
                 </a>
             </nav>
+
+
         </aside>
 
         <!-- Main Content -->
@@ -57,7 +66,7 @@
 
             <!-- Calendar Container -->
             <section class="calendar-container">
-                <div class="category-section">
+                <div class="category-section" id="academic-section">
                     <h3 class="category-title">การศึกษา</h3>
                     <div class="event-cards">
                         <article class="event-card cat-academic">
@@ -98,7 +107,7 @@
                     </div>
                 </div>
 
-                <div class="category-section">
+                <div class="category-section" id="sports-section">
                     <h3 class="category-title">กีฬา/วัฒนธรรม</h3>
                     <div class="event-cards">
                         <article class="event-card cat-sports">
@@ -129,7 +138,7 @@
                     </div>
                 </div>
 
-                <div class="category-section">
+                <div class="category-section" id="holiday-section">
                     <h3 class="category-title">วันหยุด</h3>
                     <div class="event-cards">
                         <article class="event-card cat-holiday">
