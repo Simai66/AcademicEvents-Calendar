@@ -42,10 +42,8 @@
 
     <!-- Filter Checkboxes -->
     <input type="checkbox" id="filter-academic" class="filter-checkbox" checked hidden>
-    <input type="checkbox" id="filter-student" class="filter-checkbox" checked hidden>
-    <input type="checkbox" id="filter-holiday" class="filter-checkbox" checked hidden>
-    <input type="checkbox" id="filter-training" class="filter-checkbox" checked hidden>
     <input type="checkbox" id="filter-sports" class="filter-checkbox" checked hidden>
+    <input type="checkbox" id="filter-holiday" class="filter-checkbox" checked hidden>
 
     <div class="app-container">
         <!-- Sidebar -->
@@ -55,7 +53,7 @@
                     <img src="assets/images/SSRU_LOGO1.png" alt="โลโก้มหาวิทยาลัยราชภัฏสวนสุนันทา" width="56"
                         height="56">
                 </div>
-                <h1 class="brand-name">CARLENDAR</h1>
+                <h1 class="brand-name">CALENDAR</h1>
             </div>
 
             <nav class="sidebar-nav" aria-label="เมนูหลัก">
@@ -63,22 +61,18 @@
                     <span class="nav-icon">🏠</span>
                     <span>หน้าแรก</span>
                 </label>
-                <label for="view-category" class="nav-item" aria-label="หมวดหมู่">
+                <a href="pages/category.html" class="nav-item" aria-label="หมวดหมู่">
                     <span class="nav-icon">📂</span>
                     <span>หมวดหมู่</span>
-                </label>
-                <label for="view-list" class="nav-item" aria-label="รายการ">
+                </a>
+                <a href="pages/list.html" class="nav-item" aria-label="รายการ">
                     <span class="nav-icon">📋</span>
                     <span>รายการ</span>
-                </label>
-                <label for="view-filter" class="nav-item" aria-label="ตัวกรอง">
+                </a>
+                <a href="pages/filter.html" class="nav-item" aria-label="ตัวกรอง">
                     <span class="nav-icon">🔍</span>
                     <span>ตัวกรอง</span>
-                </label>
-                <label for="view-detail" class="nav-item" aria-label="รายละเอียด">
-                    <span class="nav-icon">📄</span>
-                    <span>รายละเอียด</span>
-                </label>
+                </a>
             </nav>
         </aside>
 
