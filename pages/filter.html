@@ -21,6 +21,11 @@
 </head>
 
 <body>
+    <!-- Hidden filter inputs -->
+    <input type="checkbox" id="filter-academic" checked>
+    <input type="checkbox" id="filter-sports" checked>
+    <input type="checkbox" id="filter-holiday" checked>
+
     <div class="app-container">
         <!-- Sidebar -->
         <aside class="sidebar">
@@ -67,18 +72,15 @@
                 <div class="filter-controls">
                     <h3>เลือกหมวดหมู่</h3>
                     <div class="filter-options">
-                        <label class="filter-option active">
-                            <input type="checkbox" class="filter-checkbox" data-category="academic" checked>
+                        <label class="filter-option" for="filter-academic">
                             <span class="checkbox-custom"></span>
                             การศึกษา
                         </label>
-                        <label class="filter-option active">
-                            <input type="checkbox" class="filter-checkbox" data-category="sports" checked>
+                        <label class="filter-option" for="filter-sports">
                             <span class="checkbox-custom"></span>
                             กีฬา/วัฒนธรรม
                         </label>
-                        <label class="filter-option active">
-                            <input type="checkbox" class="filter-checkbox" data-category="holiday" checked>
+                        <label class="filter-option" for="filter-holiday">
                             <span class="checkbox-custom"></span>
                             วันหยุด
                         </label>
@@ -244,69 +246,6 @@
             </a>
         </nav>
     </details>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const filterCheckboxes = document.querySelectorAll('.filter-checkbox');
-            const eventCards = document.querySelectorAll('.event-card');
-
-            // Initialize filter state
-            filterCheckboxes.forEach(checkbox => {
-                const category = checkbox.dataset.category;
-                const label = checkbox.closest('.filter-option');
-
-                // Set initial state
-                if (checkbox.checked) {
-                    label.classList.add('active');
-                } else {
-                    label.classList.remove('active');
-                }
-
-                // Add event listener
-                checkbox.addEventListener('change', function () {
-                    const events = document.querySelectorAll(`[data-category="${category}"]`);
-
-                    if (this.checked) {
-                        label.classList.add('active');
-                        events.forEach(event => {
-                            if (event.classList.contains('event-card')) {
-                                event.style.display = 'block';
-                                event.style.animation = 'fadeIn 0.3s ease';
-                            }
-                        });
-                    } else {
-                        label.classList.remove('active');
-                        events.forEach(event => {
-                            if (event.classList.contains('event-card')) {
-                                event.style.display = 'none';
-                            }
-                        });
-                    }
-
-                    // Update event count
-                    updateEventCount();
-                });
-            });
-
-            function updateEventCount() {
-                const visibleEvents = document.querySelectorAll('.event-card[style*="display: block"], .event-card:not([style*="display: none"])');
-                const totalEvents = document.querySelectorAll('.event-card').length;
-
-                // You can add a counter display here if needed
-                console.log(`แสดง ${visibleEvents.length} จาก ${totalEvents} กิจกรรม`);
-            }
-
-            // Add CSS animation for fade in effect
-            const style = document.createElement('style');
-            style.textContent = `
-                @keyframes fadeIn {
-                    from { opacity: 0; transform: translateY(10px); }
-                    to { opacity: 1; transform: translateY(0); }
-                }
-            `;
-            document.head.appendChild(style);
-        });
-    </script>
 </body>
 
 </html>
