@@ -27,11 +27,11 @@ html {
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    --category-academic: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --category-student: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
-    --category-holiday: linear-gradient(135deg, #fc466b 0%, #3f5efb 100%);
-    --category-training: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-    --category-sports: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    --category-academic: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    --category-student: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    --category-holiday: linear-gradient(135deg, #ef4444, #dc2626);
+    --category-training: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    --category-sports: linear-gradient(135deg, #f59e0b, #d97706);
 }
 
 body {
@@ -81,13 +81,13 @@ h4 {
 /* App Container */
 .app-container {
     display: grid;
-    grid-template-columns: 260px 1fr;
+    grid-template-columns: 60px 1fr;
     grid-template-rows: 1fr auto;
     min-height: 100vh;
     background: var(--white);
-    border-radius: 20px;
-    margin: 20px;
-    box-shadow: var(--shadow-xl);
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none;
     overflow: hidden;
 }
 
@@ -129,10 +129,17 @@ h4 {
 /* Sidebar */
 .sidebar {
     background: var(--gradient-primary);
-    padding: 1.5rem;
+    padding: 1.25rem;
     grid-column: 1;
     grid-row: 1 / -1;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    z-index: 1000;
+    overflow-y: auto;
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.15);
 }
 
 .sidebar::before {
@@ -302,6 +309,8 @@ h4 {
     grid-row: 1;
     overflow-y: auto;
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    margin-left: 200px;
+    position: relative;
 }
 
 /* Hero Section */
@@ -361,7 +370,7 @@ h4 {
 /* Calendar Container */
 .calendar-container {
     background: var(--white);
-    margin: 2rem;
+    margin: 0.5rem 1rem 2rem 0;
     border-radius: 24px;
     padding: 2.5rem;
     min-height: 600px;
@@ -636,8 +645,11 @@ h4 {
     background: var(--category-sports);
 }
 
-.event-category.sports {
-    background-color: var(--category-sports);
+/* Legacy categories mapping to new colors */
+.event-category.student,
+.event-category.training,
+.event-category.cultural {
+    background: var(--category-sports);
 }
 
 /* Event Summary */
@@ -872,8 +884,9 @@ h4 {
     background-color: var(--primary-pink);
     color: var(--text-dark);
     padding: 2rem;
-    grid-column: 1 / -1;
+    grid-column: 2;
     grid-row: 2;
+    margin-left: 200px;
 }
 
 .footer-content {
@@ -902,11 +915,20 @@ h4 {
 /* Responsive Design */
 @media (max-width: 1024px) {
     .app-container {
-        grid-template-columns: 220px 1fr;
+        grid-template-columns: 200px 1fr;
     }
 
     .sidebar {
+        width: 200px;
         padding: 1rem;
+    }
+
+    .main-content {
+        margin-left: 200px;
+    }
+
+    .footer {
+        margin-left: 200px;
     }
 
     .brand-name {
@@ -918,9 +940,14 @@ h4 {
     .app-container {
         grid-template-columns: 1fr;
         grid-template-rows: auto 1fr auto;
+        margin: 0;
+        border-radius: 0;
     }
 
     .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
         display: none;
     }
 
@@ -971,7 +998,13 @@ h4 {
         grid-column: 1;
         grid-row: 2;
         margin-top: 4rem;
+        margin-left: 0;
+        border-top-left-radius: 0;
         /* Add space for mobile nav */
+    }
+
+    .main-content::before {
+        display: none;
     }
 
     .hero {
@@ -980,7 +1013,7 @@ h4 {
     }
 
     .calendar-container {
-        margin: 1rem;
+        margin: 0.5rem;
         padding: 1rem;
     }
 
@@ -1018,6 +1051,12 @@ h4 {
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+
+    .footer {
+        grid-column: 1;
+        margin-left: 0;
+        border-bottom-left-radius: 0;
     }
 
     .info-item {

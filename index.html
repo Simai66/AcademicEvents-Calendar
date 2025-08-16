@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CARLENDAR - ปฏิทินการศึกษา | SSRU</title>
+    <title>CALENDAR - ปฏิทินการศึกษา | SSRU</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -58,19 +59,19 @@
 
             <nav class="sidebar-nav" aria-label="เมนูหลัก">
                 <label for="view-home" class="nav-item" aria-label="หน้าแรก">
-                    <span class="nav-icon">🏠</span>
+                    <i class="fas fa-home nav-icon"></i>
                     <span>หน้าแรก</span>
                 </label>
                 <a href="pages/category.html" class="nav-item" aria-label="หมวดหมู่">
-                    <span class="nav-icon">📂</span>
+                    <i class="fas fa-folder nav-icon"></i>
                     <span>หมวดหมู่</span>
                 </a>
                 <a href="pages/list.html" class="nav-item" aria-label="รายการ">
-                    <span class="nav-icon">📋</span>
+                    <i class="fas fa-list nav-icon"></i>
                     <span>รายการ</span>
                 </a>
                 <a href="pages/filter.html" class="nav-item" aria-label="ตัวกรอง">
-                    <span class="nav-icon">🔍</span>
+                    <i class="fas fa-filter nav-icon"></i>
                     <span>ตัวกรอง</span>
                 </a>
             </nav>
@@ -186,17 +187,17 @@
                     </div>
 
                     <div class="category-section">
-                        <h3 class="category-title">กิจกรรมนักศึกษา</h3>
+                        <h3 class="category-title">กีฬา/วัฒนธรรม</h3>
                         <div class="event-cards">
-                            <article class="event-card cat-student">
+                            <article class="event-card cat-sports">
                                 <div class="event-date">วัน 28 มกราคม 2568</div>
                                 <div class="event-details">รายละเอียด: วันกีฬามหาวิทยาลัย</div>
-                                <div class="event-category student">กิจกรรมนักศึกษา</div>
+                                <div class="event-category sports">กีฬา/วัฒนธรรม</div>
                             </article>
-                            <article class="event-card cat-student">
+                            <article class="event-card cat-sports">
                                 <div class="event-date">วัน 14 กุมภาพันธ์ 2568</div>
                                 <div class="event-details">รายละเอียด: วันวาเลนไทน์ กิจกรรมพิเศษ</div>
-                                <div class="event-category student">กิจกรรมนักศึกษา</div>
+                                <div class="event-category sports">กีฬา/วัฒนธรรม</div>
                             </article>
                         </div>
                     </div>
@@ -212,10 +213,10 @@
                                 <div class="event-details">รายละเอียด: วันเปิดเทอมภาคเรียนที่ 2/2567</div>
                                 <div class="event-category academic">การศึกษา</div>
                             </article>
-                            <article class="event-card cat-student">
+                            <article class="event-card cat-sports">
                                 <div class="event-date">วัน 28 มกราคม 2568</div>
                                 <div class="event-details">รายละเอียด: วันกีฬามหาวิทยาลัย</div>
-                                <div class="event-category student">กิจกรรมนักศึกษา</div>
+                                <div class="event-category sports">กีฬา/วัฒนธรรม</div>
                             </article>
                         </div>
                     </div>
@@ -223,10 +224,10 @@
                     <div class="month-block">
                         <h3 class="month-block-title">เดือนกุมภาพันธ์ 2568</h3>
                         <div class="event-cards">
-                            <article class="event-card cat-student">
+                            <article class="event-card cat-sports">
                                 <div class="event-date">วัน 14 กุมภาพันธ์ 2568</div>
                                 <div class="event-details">รายละเอียด: วันวาเลนไทน์ กิจกรรมพิเศษ</div>
-                                <div class="event-category student">กิจกรรมนักศึกษา</div>
+                                <div class="event-category sports">กีฬา/วัฒนธรรม</div>
                             </article>
                             <article class="event-card cat-holiday">
                                 <div class="event-date">วัน 24 กุมภาพันธ์ 2568</div>
@@ -246,18 +247,6 @@
                                 <span class="checkbox-custom"></span>
                                 การศึกษา
                             </label>
-                            <label for="filter-student" class="filter-option">
-                                <span class="checkbox-custom"></span>
-                                กิจกรรมนักศึกษา
-                            </label>
-                            <label for="filter-holiday" class="filter-option">
-                                <span class="checkbox-custom"></span>
-                                วันหยุด
-                            </label>
-                            <label for="filter-training" class="filter-option">
-                                <span class="checkbox-custom"></span>
-                                อบรม/สัมมนา
-                            </label>
                             <label for="filter-sports" class="filter-option">
                                 <span class="checkbox-custom"></span>
                                 กีฬา/วัฒนธรรม
@@ -271,20 +260,20 @@
                             <div class="event-details">รายละเอียด: วันเปิดเทอมภาคเรียนที่ 2/2567</div>
                             <div class="event-category academic">การศึกษา</div>
                         </article>
-                        <article class="event-card cat-student event">
+                        <article class="event-card cat-sports event">
                             <div class="event-date">วัน 28 มกราคม 2568</div>
                             <div class="event-details">รายละเอียด: วันกีฬามหาวิทยาลัย</div>
-                            <div class="event-category student">กิจกรรมนักศึกษา</div>
+                            <div class="event-category sports">กีฬา/วัฒนธรรม</div>
                         </article>
                         <article class="event-card cat-holiday event">
                             <div class="event-date">วัน 24 กุมภาพันธ์ 2568</div>
                             <div class="event-details">รายละเอียด: วันมาฆบูชา</div>
                             <div class="event-category holiday">วันหยุด</div>
                         </article>
-                        <article class="event-card cat-training event">
+                        <article class="event-card cat-academic event">
                             <div class="event-date">วัน 10 มีนาคม 2568</div>
                             <div class="event-details">รายละเอียด: อบรมทักษะความเป็นผู้นำ</div>
-                            <div class="event-category training">อบรม/สัมมนา</div>
+                            <div class="event-category academic">การศึกษา</div>
                         </article>
                         <article class="event-card cat-sports event">
                             <div class="event-date">วัน 25 เมษายน 2568</div>

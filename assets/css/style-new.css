@@ -1,0 +1,56 @@
+/* Main CSS File - Import all components */
+
+/* Core Styles */
+@import url('components/variables.css');
+@import url('components/base.css');
+@import url('components/layout.css');
+
+/* Component Styles */
+@import url('components/sidebar.css');
+@import url('components/main.css');
+@import url('components/calendar.css');
+@import url('components/events.css');
+@import url('components/footer.css');
+@import url('components/filter.css');
+@import url('components/detail.css');
+
+/* Responsive Styles */
+@import url('components/responsive.css');
+
+/* Legacy Support - เพื่อ backward compatibility */
+.event-category.student,
+.event-category.training,
+.event-category.cultural {
+    background: var(--category-sports);
+}
+
+/* Filter Logic */
+#filter-academic:not(:checked)~.app-container .cat-academic.event {
+    display: none !important;
+}
+
+#filter-student:not(:checked)~.app-container .cat-student.event {
+    display: none !important;
+}
+
+#filter-holiday:not(:checked)~.app-container .cat-holiday.event {
+    display: none !important;
+}
+
+#filter-training:not(:checked)~.app-container .cat-training.event {
+    display: none !important;
+}
+
+#filter-sports:not(:checked)~.app-container .cat-sports.event {
+    display: none !important;
+}
+
+/* Active states for navigation */
+#view-home:checked~.app-container .sidebar label[for="view-home"],
+#view-category:checked~.app-container .sidebar label[for="view-category"],
+#view-list:checked~.app-container .sidebar label[for="view-list"],
+#view-filter:checked~.app-container .sidebar label[for="view-filter"],
+#view-detail:checked~.app-container .sidebar label[for="view-detail"] {
+    background-color: var(--white);
+    color: var(--primary-pink);
+}

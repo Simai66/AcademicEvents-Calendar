@@ -6,7 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ตัวกรอง - CALENDAR | SSRU</title>
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/filter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -28,19 +34,19 @@
 
             <nav class="sidebar-nav" aria-label="เมนูหลัก">
                 <a href="../index.html" class="nav-item" aria-label="หน้าแรก">
-                    <span class="nav-icon">🏠</span>
+                    <i class="fas fa-home nav-icon"></i>
                     <span>หน้าแรก</span>
                 </a>
                 <a href="category.html" class="nav-item" aria-label="หมวดหมู่">
-                    <span class="nav-icon">📂</span>
+                    <i class="fas fa-folder nav-icon"></i>
                     <span>หมวดหมู่</span>
                 </a>
                 <a href="list.html" class="nav-item" aria-label="รายการ">
-                    <span class="nav-icon">📋</span>
+                    <i class="fas fa-list nav-icon"></i>
                     <span>รายการ</span>
                 </a>
                 <a href="filter.html" class="nav-item active" aria-label="ตัวกรอง">
-                    <span class="nav-icon">🔍</span>
+                    <i class="fas fa-filter nav-icon"></i>
                     <span>ตัวกรอง</span>
                 </a>
             </nav>
@@ -224,38 +230,82 @@
     <details class="mobile-nav">
         <summary class="mobile-nav-toggle">☰ เมนู</summary>
         <nav class="mobile-nav-content" aria-label="เมนูมือถือ">
-            <a href="../index.html" class="nav-item">🏠 หน้าแรก</a>
-            <a href="category.html" class="nav-item">📂 หมวดหมู่</a>
-            <a href="list.html" class="nav-item">📋 รายการ</a>
-            <a href="filter.html" class="nav-item">🔍 ตัวกรอง</a>
+            <a href="../index.html" class="nav-item">
+                <i class="fas fa-home"></i> หน้าแรก
+            </a>
+            <a href="category.html" class="nav-item">
+                <i class="fas fa-folder"></i> หมวดหมู่
+            </a>
+            <a href="list.html" class="nav-item">
+                <i class="fas fa-list"></i> รายการ
+            </a>
+            <a href="filter.html" class="nav-item">
+                <i class="fas fa-filter"></i> ตัวกรอง
+            </a>
         </nav>
     </details>
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const filterCheckboxes = document.querySelectorAll('.filter-checkbox');
+            const eventCards = document.querySelectorAll('.event-card');
 
+            // Initialize filter state
             filterCheckboxes.forEach(checkbox => {
+                const category = checkbox.dataset.category;
+                const label = checkbox.closest('.filter-option');
+
+                // Set initial state
+                if (checkbox.checked) {
+                    label.classList.add('active');
+                } else {
+                    label.classList.remove('active');
+                }
+
+                // Add event listener
                 checkbox.addEventListener('change', function () {
-                    const category = this.dataset.category;
-                    const label = this.closest('.filter-option');
                     const events = document.querySelectorAll(`[data-category="${category}"]`);
 
                     if (this.checked) {
                         label.classList.add('active');
                         events.forEach(event => {
-                            event.style.display = 'block';
+                            if (event.classList.contains('event-card')) {
+                                event.style.display = 'block';
+                                event.style.animation = 'fadeIn 0.3s ease';
+                            }
                         });
                     } else {
                         label.classList.remove('active');
                         events.forEach(event => {
-                            event.style.display = 'none';
+                            if (event.classList.contains('event-card')) {
+                                event.style.display = 'none';
+                            }
                         });
                     }
+
+                    // Update event count
+                    updateEventCount();
                 });
             });
-        });
 
+            function updateEventCount() {
+                const visibleEvents = document.querySelectorAll('.event-card[style*="display: block"], .event-card:not([style*="display: none"])');
+                const totalEvents = document.querySelectorAll('.event-card').length;
+
+                // You can add a counter display here if needed
+                console.log(`แสดง ${visibleEvents.length} จาก ${totalEvents} กิจกรรม`);
+            }
+
+            // Add CSS animation for fade in effect
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes fadeIn {
+                    from { opacity: 0; transform: translateY(10px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+            `;
+            document.head.appendChild(style);
+        });
     </script>
 </body>
 

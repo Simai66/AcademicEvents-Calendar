@@ -1,0 +1,26 @@
+/* App Container */
+.app-container {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
+    background: var(--white);
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none;
+    overflow: hidden;
+}
+
+/* View Switching Logic */
+.view {
+    display: none;
+}
+
+/* Show views based on radio selection */
+#view-home:checked~.app-container .view-home,
+#view-category:checked~.app-container .view-category,
+#view-list:checked~.app-container .view-list,
+#view-filter:checked~.app-container .view-filter,
+#view-detail:checked~.app-container .view-detail {
+    display: block;
+}
