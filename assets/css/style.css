@@ -156,7 +156,7 @@ h4 {
 .sidebar-header {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0rem;
     margin-bottom: 2rem;
     position: relative;
     z-index: 1;
