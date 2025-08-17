@@ -1134,3 +1134,167 @@ input:focus,
         transition-duration: 0.01ms !important;
     }
 }
+
+/* ส่วนหน้า About */
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.about-card {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-left: 4px solid var(--primary-color);
+}
+
+.about-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.about-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-icon {
+    font-size: 2rem;
+    color: var(--primary-color);
+    min-width: 2rem;
+}
+
+.about-header h3 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin: 0;
+    font-weight: 600;
+}
+
+.about-content {
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.about-content p {
+    margin: 0 0 1rem 0;
+}
+
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    padding-left: 2rem;
+}
+
+.about-list li:last-child {
+    border-bottom: none;
+}
+
+.about-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--success-color);
+    font-weight: bold;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: var(--bg-primary);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: background-color 0.2s ease;
+}
+
+.feature-item:hover {
+    background: var(--hover-color);
+}
+
+.feature-item i {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    min-width: 1.25rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.contact-item i {
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    min-width: 1.25rem;
+    margin-top: 0.25rem;
+}
+
+/* รองรับหน้าจอขนาดเล็ก */
+@media (max-width: 768px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .about-card {
+        padding: 1.5rem;
+    }
+
+    .about-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+
+    .about-header h3 {
+        font-size: 1.25rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-item {
+        text-align: center;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+    }
+}

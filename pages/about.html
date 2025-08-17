@@ -1,11 +1,182 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>เกี่ยวกับเรา - CALENDAR - SSRU</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sarabun:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
-    
+    <div class="app-container">
+        <!-- แถบด้านข้าง -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <img src="../assets/images/SSRU_LOGO1.png" alt="โลโก้มหาวิทยาลัยราชภัฏสวนสุนันทา" width="56"
+                        height="56">
+                </div>
+                <h1 class="brand-name">CALENDAR</h1>
+            </div>
+
+            <nav class="sidebar-nav" aria-label="เมนูหลัก">
+                <a href="../index.html" class="nav-item">
+                    <i class="fas fa-home"></i>
+                    <span>หน้าแรก</span>
+                </a>
+                <a href="category.html" class="nav-item">
+                    <i class="fas fa-folder"></i>
+                    <span>หมวดหมู่</span>
+                </a>
+                <a href="list.html" class="nav-item">
+                    <i class="fas fa-list"></i>
+                    <span>รายการ</span>
+                </a>
+                <a href="filter.html" class="nav-item">
+                    <i class="fas fa-filter"></i>
+                    <span>ตัวกรอง</span>
+                </a>
+                <a href="about.html" class="nav-item active">
+                    <i class="fas fa-info-circle"></i>
+                    <span>เกี่ยวกับเรา</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- เมนูมือถือ -->
+        <details class="mobile-nav">
+            <summary class="mobile-nav-toggle">☰ เมนู</summary>
+            <nav class="mobile-nav-content" aria-label="เมนูมือถือ">
+                <a href="../index.html" class="nav-item">
+                    <i class="fas fa-home"></i> หน้าแรก
+                </a>
+                <a href="category.html" class="nav-item">
+                    <i class="fas fa-folder"></i> หมวดหมู่
+                </a>
+                <a href="list.html" class="nav-item">
+                    <i class="fas fa-list"></i> รายการ
+                </a>
+                <a href="filter.html" class="nav-item">
+                    <i class="fas fa-filter"></i> ตัวกรอง
+                </a>
+                <a href="about.html" class="nav-item active">
+                    <i class="fas fa-info-circle"></i> เกี่ยวกับเรา
+                </a>
+            </nav>
+        </details>
+
+        <!-- เนื้อหาหลัก -->
+        <main class="main-content">
+            <!-- ส่วนหัว -->
+            <section class="hero">
+                <div class="hero-content">
+                    <h2>เกี่ยวกับปฏิทินการศึกษา</h2>
+                    <p>ระบบปฏิทินกิจกรรมมหาวิทยาลัยราชภัฏสวนสุนันทา</p>
+                </div>
+            </section>
+
+            <!-- เนื้อหาเกี่ยวกับเรา -->
+            <section class="content-section">
+                <div class="about-container">
+                    <div class="about-card">
+                        <div class="about-header">
+                            <i class="fas fa-university about-icon"></i>
+                            <h3>เกี่ยวกับมหาวิทยาลัย</h3>
+                        </div>
+                        <div class="about-content">
+                            <p>มหาวิทยาลัยราชภัฏสวนสุนันทา เป็นสถาบันการศึกษาที่มุ่งมั่นในการพัฒนาการศึกษา การวิจัย
+                                และการบริการวิชาการแก่ชุมชนและสังคม
+                                เพื่อสร้างบัณฑิตที่มีคุณภาพและเป็นพลเมืองที่ดีของสังคม</p>
+                        </div>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-header">
+                            <i class="fas fa-calendar-alt about-icon"></i>
+                            <h3>เกี่ยวกับระบบปฏิทิน</h3>
+                        </div>
+                        <div class="about-content">
+                            <p>ระบบปฏิทินการศึกษาและกิจกรรมนี้ถูกพัฒนาขึ้นเพื่อให้นักศึกษา คณาจารย์
+                                และบุคลากรสามารถติดตามกิจกรรมสำคัญต่างๆ ของมหาวิทยาลัยได้อย่างสะดวกและรวดเร็ว</p>
+                        </div>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-header">
+                            <i class="fas fa-bullseye about-icon"></i>
+                            <h3>วัตถุประสงค์</h3>
+                        </div>
+                        <div class="about-content">
+                            <ul class="about-list">
+                                <li>เพื่อให้ข้อมูลปฏิทินการศึกษาที่ถูกต้องและเป็นปัจจุบัน</li>
+                                <li>เพื่อประชาสัมพันธ์กิจกรรมต่างๆ ของมหาวิทยาลัย</li>
+                                <li>เพื่อเพิ่มประสิทธิภาพในการจัดการเวลาและการเข้าร่วมกิจกรรม</li>
+                                <li>เพื่อสร้างความสะดวกในการเข้าถึงข้อมูลสำหรับชุมชนมหาวิทยาลัย</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-header">
+                            <i class="fas fa-features about-icon"></i>
+                            <h3>ฟีเจอร์หลัก</h3>
+                        </div>
+                        <div class="about-content">
+                            <div class="features-grid">
+                                <div class="feature-item">
+                                    <i class="fas fa-search"></i>
+                                    <span>ค้นหาและกรองกิจกรรม</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>รองรับการใช้งานบนมือถือ</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-bell"></i>
+                                    <span>การแจ้งเตือนกิจกรรม</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-tags"></i>
+                                    <span>จัดหมวดหมู่กิจกรรม</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-header">
+                            <i class="fas fa-envelope about-icon"></i>
+                            <h3>ติดต่อเรา</h3>
+                        </div>
+                        <div class="about-content">
+                            <div class="contact-info">
+                                <div class="contact-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>มหาวิทยาลัยราชภัฏสวนสุนันทา<br>1 ถนนอู่ทองนอก เขตดุสิต กรุงเทพมหานคร
+                                        10300</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    <span>02-160-1000</span>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="fas fa-globe"></i>
+                                    <span>www.ssru.ac.th</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
+
 </html>
