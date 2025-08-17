@@ -15,19 +15,19 @@
 </head>
 
 <body>
-    <!-- Hidden Radio Inputs for View Switching -->
+    <!-- ปุ่มเปลี่ยนหน้า -->
     <input type="radio" id="view-home" name="view" value="home" checked hidden>
     <input type="radio" id="view-category" name="view" value="category" hidden>
     <input type="radio" id="view-list" name="view" value="list" hidden>
     <input type="radio" id="view-filter" name="view" value="filter" hidden>
     <input type="radio" id="view-detail" name="view" value="detail" hidden>
 
-    <!-- Year Selection -->
+    <!-- เลือกปี -->
     <input type="radio" id="year-2568" name="year" value="2568" checked hidden>
     <input type="radio" id="year-2567" name="year" value="2567" hidden>
     <input type="radio" id="year-2566" name="year" value="2566" hidden>
 
-    <!-- Month Selection for each year -->
+    <!-- เลือกเดือน -->
     <input type="radio" id="month-2568-1" name="month-2568" value="1" checked hidden>
     <input type="radio" id="month-2568-2" name="month-2568" value="2" hidden>
     <input type="radio" id="month-2568-3" name="month-2568" value="3" hidden>
@@ -41,13 +41,13 @@
     <input type="radio" id="month-2568-11" name="month-2568" value="11" hidden>
     <input type="radio" id="month-2568-12" name="month-2568" value="12" hidden>
 
-    <!-- Filter Checkboxes -->
+    <!-- ตัวกรอง -->
     <input type="checkbox" id="filter-academic" class="filter-checkbox" checked hidden>
     <input type="checkbox" id="filter-sports" class="filter-checkbox" checked hidden>
     <input type="checkbox" id="filter-holiday" class="filter-checkbox" checked hidden>
 
     <div class="app-container">
-        <!-- Sidebar -->
+        <!-- แถบด้านข้าง -->
         <aside class="sidebar">
             <div class="sidebar-header">
                 <div class="logo">
@@ -77,9 +77,9 @@
             </nav>
         </aside>
 
-        <!-- Main Content -->
+        <!-- เนื้อหาหลัก -->
         <main class="main-content">
-            <!-- Hero Section -->
+            <!-- ส่วนหัว -->
             <section class="hero">
                 <div class="hero-content">
                     <h2>ปฏิทินการศึกษาและกิจกรรม</h2>
@@ -87,9 +87,9 @@
                 </div>
             </section>
 
-            <!-- Calendar Container -->
+            <!-- ส่วนปฏิทิน -->
             <section class="calendar-container">
-                <!-- Home View -->
+                <!-- หน้าแรก -->
                 <div class="view view-home">
                     <div class="calendar-header">
                         <div class="year-selector">
@@ -163,7 +163,7 @@
                     </div>
                 </div>
 
-                <!-- Category View -->
+                <!-- หน้าหมวดหมู่ -->
                 <div class="view view-category">
                     <div class="category-section">
                         <h3 class="category-title">การศึกษา</h3>
@@ -203,7 +203,7 @@
                     </div>
                 </div>
 
-                <!-- List View -->
+                <!-- หน้ารายการ -->
                 <div class="view view-list">
                     <div class="month-block">
                         <h3 class="month-block-title">เดือนมกราคม 2568</h3>
@@ -238,7 +238,7 @@
                     </div>
                 </div>
 
-                <!-- Filter View -->
+                <!-- หน้าตัวกรอง -->
                 <div class="view view-filter">
                     <div class="filter-controls">
                         <h3>เลือกหมวดหมู่</h3>
@@ -283,7 +283,7 @@
                     </div>
                 </div>
 
-                <!-- Detail View -->
+                <!-- หน้ารายละเอียด -->
                 <div class="view view-detail">
                     <div class="event-detail">
                         <h3>รายละเอียดกิจกรรม</h3>
@@ -318,7 +318,7 @@
             </section>
         </main>
 
-        <!-- Footer -->
+        <!-- ส่วนท้าย -->
         <footer class="footer">
             <div class="footer-content">
                 <div class="footer-left">
@@ -334,7 +334,7 @@
         </footer>
     </div>
 
-    <!-- Mobile Responsive Sidebar Toggle -->
+    <!-- เมนูมือถือ -->
     <details class="mobile-nav">
         <summary class="mobile-nav-toggle">☰ เมนู</summary>
         <nav class="mobile-nav-content" aria-label="เมนูมือถือ">

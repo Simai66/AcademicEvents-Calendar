@@ -1,11 +1,11 @@
-/* Main CSS File - Import all components */
+/* ไฟล์ CSS หลัก - นำเข้าส่วนประกอบทั้งหมด */
 
-/* Core Styles */
+/* สไตล์หลัก */
 @import url('components/variables.css');
 @import url('components/base.css');
 @import url('components/layout.css');
 
-/* Component Styles */
+/* สไตล์ส่วนประกอบ */
 @import url('components/sidebar.css');
 @import url('components/main.css');
 @import url('components/calendar.css');
@@ -14,17 +14,17 @@
 @import url('components/filter.css');
 @import url('components/detail.css');
 
-/* Responsive Styles */
+/* สไตล์รองรับหน้าจอ */
 @import url('components/responsive.css');
 
-/* Legacy Support - เพื่อ backward compatibility */
+/* รองรับเวอร์ชันเก่า - เพื่อ backward compatibility */
 .event-category.student,
 .event-category.training,
 .event-category.cultural {
     background: var(--category-sports);
 }
 
-/* Filter Logic */
+/* ตรรกะตัวกรอง */
 #filter-academic:not(:checked)~.app-container .cat-academic.event {
     display: none !important;
 }
@@ -45,7 +45,7 @@
     display: none !important;
 }
 
-/* Active states for navigation */
+/* สถานะเมนูที่เลือก */
 #view-home:checked~.app-container .sidebar label[for="view-home"],
 #view-category:checked~.app-container .sidebar label[for="view-category"],
 #view-list:checked~.app-container .sidebar label[for="view-list"],
