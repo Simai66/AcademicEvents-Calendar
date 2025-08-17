@@ -1,4 +1,5 @@
-/* รีเซ็ตและสไตล์พื้นฐาน */
+/* PATCH START: responsive-360-1440 */
+/* แก้ไขปัญหา overflow และ performance สำหรับ Mobile First */
 * {
     margin: 0;
     padding: 0;
@@ -7,9 +8,94 @@
 
 html {
     scroll-behavior: smooth;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+img,
+video,
+iframe {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ปรับปรุงการแสดงผลปฏิทินให้รองรับ Mobile First */
+.calendar-grid {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.weekday-header,
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(40px, 1fr));
+    gap: 1px;
+    width: 100%;
+}
+
+.day-cell {
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+/* การปรับปรุงประสิทธิภาพ */
+.app-container {
+    contain: layout style;
+}
+
+.sidebar {
+    contain: layout;
+}
+
+.main-content {
+    contain: layout;
+}
+
+/* แก้ไข z-index conflicts */
+.mobile-nav {
+    z-index: 1002;
+}
+
+.sidebar {
+    z-index: 1001;
+}
+
+/* PATCH END: responsive-360-1440 */
+
+html {
+    scroll-behavior: smooth;
+    /* PATCH START: responsive-360-1440 */
+    max-width: 100%;
+    overflow-x: hidden;
+    /* PATCH END: responsive-360-1440 */
 }
 
 :root {
+    /* PATCH START: responsive-360-1440 */
+    --sidebar-w: 260px;
+    --fs-body: clamp(14px, 1.2vw, 18px);
+    --fs-h1: clamp(24px, 3.2vw, 40px);
+    --fs-h2: clamp(20px, 2.6vw, 32px);
+    --space: clamp(8px, 1.2vw, 24px);
+    --primary-blue: #3f458d;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --text-primary: #1a202c;
+    --text-secondary: #4a5568;
+    --primary-color: var(--primary-pink);
+    --success-color: #16a34a;
+    --hover-color: #f8fafc;
+    /* PATCH END: responsive-360-1440 */
     --primary-pink: #f06faa;
     --secondary-blue: #3f458d;
     --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -42,7 +128,20 @@ body {
     background: var(--background);
     background-attachment: fixed;
     min-height: 100vh;
+    /* PATCH START: responsive-360-1440 */
+    max-width: 100%;
+    overflow-x: hidden;
+    /* PATCH END: responsive-360-1440 */
 }
+
+/* PATCH START: responsive-360-1440 */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* PATCH END: responsive-360-1440 */
 
 /* การตั้งค่าตัวอักษร */
 h1,
@@ -80,8 +179,10 @@ h4 {
 
 /* คอนเทนเนอร์หลัก */
 .app-container {
+    /* PATCH START: responsive-360-1440 */
     display: grid;
-    grid-template-columns: 60px 1fr;
+    grid-template-columns: var(--sidebar-w) 1fr;
+    /* PATCH END: responsive-360-1440 */
     grid-template-rows: 1fr auto;
     min-height: 100vh;
     background: var(--white);
@@ -135,7 +236,9 @@ h4 {
     position: fixed;
     top: 0;
     left: 0;
-    width: 260px;
+    /* PATCH START: responsive-360-1440 */
+    width: var(--sidebar-w);
+    /* PATCH END: responsive-360-1440 */
     height: 100vh;
     z-index: 1000;
     overflow-y: auto;
@@ -210,7 +313,6 @@ h4 {
     font-weight: 500;
     text-decoration: none;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
     position: relative;
     overflow: hidden;
 }
@@ -253,7 +355,6 @@ h4 {
 .sub-nav {
     margin-top: 20px;
     padding-left: 20px;
-    border-left: 3px solid rgba(255, 255, 255, 0.3);
     position: relative;
     z-index: 1;
 }
@@ -269,7 +370,6 @@ h4 {
     font-weight: 500;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .sub-nav a:hover {
@@ -309,7 +409,9 @@ h4 {
     grid-row: 1;
     overflow-y: auto;
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-    margin-left: 200px;
+    /* PATCH START: responsive-360-1440 */
+    margin-left: var(--sidebar-w);
+    /* PATCH END: responsive-360-1440 */
     position: relative;
 }
 
@@ -375,7 +477,6 @@ h4 {
     padding: 2.5rem;
     min-height: 600px;
     box-shadow: var(--shadow-lg);
-    border: 1px solid var(--border-color);
 }
 
 /* ส่วนหัวปฏิทิน */
@@ -397,7 +498,6 @@ h4 {
 .year-btn,
 .month-btn {
     padding: 0.75rem 1.5rem;
-    border: 2px solid var(--border-color);
     border-radius: 16px;
     background: var(--white);
     cursor: pointer;
@@ -434,7 +534,6 @@ h4 {
 
 .year-btn:hover,
 .month-btn:hover {
-    border-color: transparent;
     color: var(--white);
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
@@ -447,7 +546,6 @@ h4 {
 .year-btn.active,
 .month-btn.active {
     background: var(--gradient-primary);
-    border-color: transparent;
     color: var(--white);
     box-shadow: var(--shadow-md);
 }
@@ -457,7 +555,6 @@ h4 {
 #year-2567:checked~.app-container .year-btn[for="year-2567"],
 #year-2566:checked~.app-container .year-btn[for="year-2566"] {
     background-color: var(--primary-pink);
-    border-color: var(--primary-pink);
     color: var(--white);
 }
 
@@ -474,7 +571,6 @@ h4 {
 #month-2568-11:checked~.app-container .month-btn[for="month-2568-11"],
 #month-2568-12:checked~.app-container .month-btn[for="month-2568-12"] {
     background-color: var(--primary-pink);
-    border-color: var(--primary-pink);
     color: var(--white);
 }
 
@@ -489,12 +585,19 @@ h4 {
     background: var(--white);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.weekday-header {
+/* PATCH START: responsive-360-1440 */
+.weekday-header,
+.calendar-days {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: var(--space);
+}
+
+/* PATCH END: responsive-360-1440 */
+
+.weekday-header {
     background-color: var(--secondary-blue);
     color: var(--white);
 }
@@ -506,17 +609,11 @@ h4 {
     font-size: 14px;
 }
 
-.calendar-days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-}
-
 .day-cell {
     aspect-ratio: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--border-color);
     cursor: pointer;
     transition: all 0.2s ease;
     font-weight: 500;
@@ -554,7 +651,6 @@ h4 {
 
 .event-card {
     background: var(--white);
-    border: 1px solid var(--border-color);
     border-radius: 20px;
     padding: 2rem;
     transition: all 0.3s ease;
@@ -577,7 +673,6 @@ h4 {
 .event-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-xl);
-    border-color: rgba(102, 126, 234, 0.3);
 }
 
 .event-card:hover::before {
@@ -680,7 +775,6 @@ h4 {
     padding: 1rem;
     background: rgba(240, 111, 170, 0.05);
     border-radius: 8px;
-    border-left: 4px solid var(--primary-pink);
 }
 
 .event-item .event-date {
@@ -744,7 +838,6 @@ h4 {
     font-size: 22px;
     color: var(--text-dark);
     margin-bottom: 1.5rem;
-    border-left: 4px solid var(--primary-pink);
     padding-left: 1rem;
 }
 
@@ -773,7 +866,6 @@ h4 {
     border-radius: 8px;
     transition: all 0.2s ease;
     background: var(--white);
-    border: 1px solid var(--border-color);
 }
 
 .filter-option:hover {
@@ -783,12 +875,12 @@ h4 {
 .checkbox-custom {
     width: 16px;
     height: 16px;
-    border: 2px solid var(--border-color);
     border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
+    background: var(--light-gray);
 }
 
 /* Checkbox states */
@@ -798,7 +890,6 @@ h4 {
 #filter-training:checked~.app-container .filter-option[for="filter-training"] .checkbox-custom,
 #filter-sports:checked~.app-container .filter-option[for="filter-sports"] .checkbox-custom {
     background-color: var(--primary-pink);
-    border-color: var(--primary-pink);
 }
 
 #filter-academic:checked~.app-container .filter-option[for="filter-academic"] .checkbox-custom::after,
@@ -833,7 +924,6 @@ h4 {
     font-size: 24px;
     color: var(--text-dark);
     margin-bottom: 1.5rem;
-    border-bottom: 2px solid var(--primary-pink);
     padding-bottom: 0.5rem;
 }
 
@@ -886,7 +976,9 @@ h4 {
     padding: 2rem;
     grid-column: 2;
     grid-row: 2;
-    margin-left: 200px;
+    /* PATCH START: responsive-360-1440 */
+    margin-left: var(--sidebar-w);
+    /* PATCH END: responsive-360-1440 */
 }
 
 .footer-content {
@@ -907,195 +999,569 @@ h4 {
     margin-bottom: 0.25rem;
 }
 
-/* Mobile Navigation */
+/* PATCH START: responsive-360-1440 */
+.container {
+    width: min(1200px, 92vw);
+    margin: 0 auto;
+}
+
+.section {
+    padding: clamp(16px, 2vw, 40px);
+}
+
+/* PATCH END: responsive-360-1440 */
+
+/* PATCH START: responsive-360-1440 */
+/* Mobile Navigation - แสดงเป็นค่าเริ่มต้นบนมือถือ */
 .mobile-nav {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1001;
+    background: var(--primary-blue);
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+    color: var(--white);
+}
+
+.mobile-nav-toggle {
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.mobile-nav-toggle::-webkit-details-marker {
     display: none;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .app-container {
-        grid-template-columns: 200px 1fr;
+.mobile-nav-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--primary-blue);
+    border-radius: 0 0 12px 12px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-width: 200px;
+    box-shadow: var(--shadow-lg);
+}
+
+.mobile-nav-content .nav-item {
+    padding: 0.75rem;
+    border-radius: 8px;
+    white-space: nowrap;
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s ease;
+}
+
+.mobile-nav-content .nav-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-nav-content .nav-item.active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* PATCH END: responsive-360-1440 */
+
+/* PATCH START: responsive-360-1440 */
+/* Mobile First Base Styles - 360px+ */
+/* แถบด้านข้างซ่อนไว้บนมือถือ */
+.sidebar {
+    display: none;
+}
+
+/* เนื้อหาหลักแสดงเต็มความกว้าง */
+.main-content {
+    margin-left: 0;
+    padding-top: 4rem;
+    /* เว้นที่สำหรับ mobile nav */
+}
+
+.footer {
+    margin-left: 0;
+}
+
+/* ปรับขนาดตัวอักษรบนมือถือ */
+.hero-content h2 {
+    font-size: clamp(20px, 5vw, 32px);
+}
+
+.hero-content p {
+    font-size: clamp(14px, 3vw, 18px);
+}
+
+/* ปรับปฏิทินให้เหมาะสมกับมือถือ */
+.calendar-container {
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 16px;
+}
+
+.calendar-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+}
+
+.year-selector,
+.month-selector {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.year-btn,
+.month-btn {
+    font-size: clamp(12px, 2.5vw, 14px);
+    padding: 0.5rem 1rem;
+    min-width: auto;
+}
+
+/* ตารางปฏิทินแสดง 7 คอลัมน์เสมอ */
+.weekday-header,
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+}
+
+.weekday {
+    padding: 0.5rem 0.25rem;
+    font-size: clamp(10px, 2vw, 14px);
+}
+
+.day-cell {
+    padding: 0.4rem 0.2rem;
+    font-size: clamp(12px, 2.5vw, 14px);
+    min-height: 40px;
+}
+
+/* การ์ดกิจกรรม */
+.event-cards {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.event-card {
+    padding: 1.5rem;
+    border-radius: 16px;
+}
+
+/* รายละเอียดกิจกรรม */
+.detail-card {
+    padding: 1.5rem;
+    border-radius: 16px;
+}
+
+.info-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+}
+
+/* ตัวกรอง */
+.filter-options {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* หน้า About */
+.about-container {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1.5rem;
+}
+
+.about-card {
+    padding: 1.5rem;
+}
+
+.about-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+}
+
+.features-grid {
+    grid-template-columns: 1fr;
+}
+
+.feature-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.contact-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+/* PATCH END: responsive-360-1440 */
+
+/* PATCH START: responsive-360-1440 */
+/* Mobile First Responsive Breakpoints */
+
+/* Small Mobile: 480px+ */
+@media (min-width: 480px) {
+    .calendar-container {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .event-cards {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .year-btn,
+    .month-btn {
+        padding: 0.6rem 1.2rem;
+    }
+
+    .hero-content h2 {
+        font-size: clamp(24px, 4vw, 28px);
+    }
+}
+
+/* Tablet Portrait: 768px+ */
+@media (min-width: 768px) {
+    :root {
+        --sidebar-w: 200px;
     }
 
     .sidebar {
-        width: 200px;
+        display: block;
+        width: var(--sidebar-w);
         padding: 1rem;
     }
 
+    .mobile-nav {
+        display: none;
+    }
+
     .main-content {
-        margin-left: 200px;
+        margin-left: var(--sidebar-w);
+        padding-top: 0;
     }
 
     .footer {
-        margin-left: 200px;
+        margin-left: var(--sidebar-w);
     }
 
     .brand-name {
         font-size: 20px;
     }
-}
-
-@media (max-width: 768px) {
-    .app-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr auto;
-        margin: 0;
-        border-radius: 0;
-    }
-
-    .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-        display: none;
-    }
-
-    .mobile-nav {
-        display: block;
-        position: fixed;
-        top: 1rem;
-        left: 1rem;
-        z-index: 1000;
-        background: var(--primary-pink);
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    .mobile-nav-toggle {
-        padding: 1rem;
-        cursor: pointer;
-        color: var(--text-dark);
-        font-weight: 600;
-        list-style: none;
-    }
-
-    .mobile-nav-toggle::-webkit-details-marker {
-        display: none;
-    }
-
-    .mobile-nav-content {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--primary-pink);
-        border-radius: 0 0 12px 12px;
-        padding: 0.5rem;
-        display: flex;
-        flex-direction: column;
-        gap: 0.25rem;
-        min-width: 200px;
-    }
-
-    .mobile-nav-content .nav-item {
-        padding: 0.75rem;
-        border-radius: 8px;
-        white-space: nowrap;
-    }
-
-    .main-content {
-        grid-column: 1;
-        grid-row: 2;
-        margin-top: 4rem;
-        margin-left: 0;
-        border-top-left-radius: 0;
-        /* Add space for mobile nav */
-    }
-
-    .main-content::before {
-        display: none;
-    }
-
-    .hero {
-        padding: 2rem 1rem;
-        margin-top: 0;
-    }
 
     .calendar-container {
-        margin: 0.5rem;
-        padding: 1rem;
+        margin: 1rem 1rem 2rem 0;
+        padding: 2rem;
     }
 
     .calendar-header {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row;
+        text-align: left;
     }
 
-    .year-selector,
-    .month-selector {
-        flex-wrap: wrap;
-        justify-content: center;
+    .hero {
+        padding: 2rem;
     }
 
-    /* Show only first 4 days on mobile for calendar */
-    .calendar-days {
-        grid-template-columns: repeat(4, 1fr);
+    .event-cards {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
-    .weekday-header {
-        grid-template-columns: repeat(4, 1fr);
+    .about-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        padding: 2rem;
     }
 
-    .weekday:nth-child(n+5) {
-        display: none;
+    .about-header {
+        flex-direction: row;
+        text-align: left;
     }
 
-    .day-cell:nth-child(4n+5),
-    .day-cell:nth-child(4n+6),
-    .day-cell:nth-child(4n+7),
-    .day-cell:nth-child(4n+1):nth-child(n+29) {
-        display: none;
+    .features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 
     .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .footer {
-        grid-column: 1;
-        margin-left: 0;
-        border-bottom-left-radius: 0;
-    }
-
-    .info-item {
-        grid-template-columns: 1fr;
-        gap: 0.5rem;
-    }
-
-    .filter-options {
-        justify-content: center;
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
     }
 }
 
-@media (max-width: 480px) {
-    .hero-content h2 {
+/* Desktop Small: 1024px+ */
+@media (min-width: 1024px) {
+    :root {
+        --sidebar-w: 260px;
+    }
+
+    .sidebar {
+        width: var(--sidebar-w);
+        padding: 1.25rem;
+    }
+
+    .main-content {
+        margin-left: var(--sidebar-w);
+    }
+
+    .footer {
+        margin-left: var(--sidebar-w);
+    }
+
+    .brand-name {
         font-size: 24px;
     }
 
-    .hero-content p {
-        font-size: 16px;
+    .calendar-container {
+        padding: 2.5rem;
+    }
+
+    .event-cards {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+}
+
+/* Desktop Large: 1280px+ */
+@media (min-width: 1280px) {
+    .container {
+        width: min(1200px, 90vw);
+    }
+
+    .event-cards {
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    }
+}
+
+/* Desktop XL: 1440px+ */
+@media (min-width: 1440px) {
+    .container {
+        width: 1200px;
     }
 
     .calendar-container {
-        border-radius: 16px;
+        max-width: 1200px;
+        margin: 1rem auto 2rem auto;
+    }
+}
+
+/* PATCH END: responsive-360-1440 */
+
+/* PATCH START: responsive-360-1440 */
+/* เพิ่ม utility classes สำหรับการใช้งานทั่วไป */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.d-none {
+    display: none !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.d-grid {
+    display: grid !important;
+}
+
+/* สำหรับการจัดการ overflow และ scrollbar */
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+.overflow-x-hidden {
+    overflow-x: hidden;
+}
+
+.overflow-y-auto {
+    overflow-y: auto;
+}
+
+/* การปรับปรุงการแสดงผลบน iOS Safari */
+@supports (-webkit-touch-callout: none) {
+    .mobile-nav {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
     }
 
-    .event-card {
-        border-radius: 16px;
-        padding: 1rem;
+    .sidebar {
+        -webkit-overflow-scrolling: touch;
     }
 
-    .detail-card {
-        padding: 1rem;
+    .calendar-container {
+        -webkit-overflow-scrolling: touch;
     }
+}
 
+/* ปรับปรุงการแสดงผลตัวอักษรใน Safari */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+
+    .nav-item,
     .year-btn,
     .month-btn {
-        font-size: 12px;
-        padding: 0.4rem 0.8rem;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
+}
+
+/* PATCH END: responsive-360-1440 */
+
+/* PATCH START: responsive-360-1440 */
+/* Performance and Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Dark mode support (basic) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-primary: #1a202c;
+        --bg-secondary: #2d3748;
+        --text-primary: #f7fafc;
+        --text-secondary: #e2e8f0;
+        --border-color: #4a5568;
+    }
+}
+
+/* Print styles */
+@media print {
+
+    .sidebar,
+    .mobile-nav,
+    .footer {
+        display: none !important;
+    }
+
+    .main-content {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+
+    .calendar-container {
+        box-shadow: none !important;
+    }
+}
+
+/* PATCH START: responsive-360-1440 */
+/* เพิ่มการรองรับ CSS Grid ที่ดีขึ้นสำหรับเบราว์เซอร์เก่า */
+@supports not (display: grid) {
+    .calendar-days {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .day-cell {
+        width: calc(100% / 7);
+        flex: 0 0 calc(100% / 7);
+    }
+
+    .weekday-header {
+        display: flex;
+    }
+
+    .weekday {
+        width: calc(100% / 7);
+        flex: 0 0 calc(100% / 7);
+    }
+}
+
+/* เพิ่มการรองรับ CSS Variables สำหรับเบราว์เซอร์เก่า */
+@supports not (--css: variables) {
+    .sidebar {
+        width: 260px;
+    }
+
+    .main-content {
+        margin-left: 260px;
+    }
+
+    .footer {
+        margin-left: 260px;
+    }
+
+    @media (max-width: 768px) {
+        .sidebar {
+            display: none;
+        }
+
+        .main-content,
+        .footer {
+            margin-left: 0;
+        }
+    }
+}
+
+/* PATCH START: responsive-360-1440 */
+/* Skip Link สำหรับ Accessibility */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 4px;
+    z-index: 1003;
+    font-weight: 600;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 6px;
+    outline: 2px solid var(--white);
+    outline-offset: 2px;
 }
 
 /* Focus Styles for Accessibility */
@@ -1111,29 +1577,75 @@ input:focus,
     outline-offset: 2px;
 }
 
-/* High contrast mode support */
-@media (prefers-contrast: high) {
-    .event-card {
-        border-width: 2px;
+/* PATCH START: responsive-360-1440 */
+/* การปรับปรุงสุดท้ายสำหรับ Performance และ User Experience */
+
+/* ปรับปรุงการแสดงผลใน Safari และ WebKit */
+.calendar-days,
+.weekday-header {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+/* การปรับปรุงสำหรับ Touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .nav-item:hover {
+        background: rgba(255, 255, 255, 0.1);
     }
 
-    .day-cell {
-        border-width: 2px;
+    .event-card:hover {
+        transform: none;
+        box-shadow: var(--shadow-sm);
     }
 
-    .event-category {
-        border: 1px solid var(--white);
+    .day-cell:hover {
+        background-color: transparent;
     }
 }
 
-/* Reduced motion support */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
+/* การปรับปรุงสำหรับ High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .logo img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
     }
 }
+
+/* เพิ่มการรองรับ Motion preferences */
+@media (prefers-reduced-motion: no-preference) {
+
+    .nav-item,
+    .event-card,
+    .mobile-nav-toggle {
+        will-change: transform;
+    }
+}
+
+/* สุดท้าย - ให้แน่ใจว่าทุกอย่างทำงานได้ดี */
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* PATCH END: responsive-360-1440 */
+
+/* PATCH START: responsive-360-1440 */
+.about-section {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.about-section .emph {
+    color: var(--primary-color);
+}
+
+/* PATCH END: responsive-360-1440 */
 
 /* ส่วนหน้า About */
 .about-container {
@@ -1151,7 +1663,6 @@ input:focus,
     padding: 2rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    border-left: 4px solid var(--primary-color);
 }
 
 .about-card:hover {
@@ -1227,7 +1738,6 @@ input:focus,
     padding: 1rem;
     background: var(--bg-primary);
     border-radius: 8px;
-    border: 1px solid var(--border-color);
     transition: background-color 0.2s ease;
 }
 
@@ -1298,3 +1808,7 @@ input:focus,
         gap: 0.5rem;
     }
 }
+
+/* PATCH START: responsive-360-1440 */
+/* ลบ media queries เก่าที่ซ้ำซ้อน และรวมเข้ากับ Mobile First ด้านบน */
+/* PATCH END: responsive-360-1440 */
