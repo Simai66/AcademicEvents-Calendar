@@ -249,7 +249,7 @@ h4 {
     outline-offset: 2px;
 }
 
-/* Sub Navigation Styles */
+/* สไตล์เมนูย่อย */
 .sub-nav {
     margin-top: 20px;
     padding-left: 20px;
@@ -293,7 +293,7 @@ h4 {
     transform: scale(1.2);
 }
 
-/* Active states for navigation */
+/* สถานะเมนูที่เลือก */
 #view-home:checked~.app-container .sidebar label[for="view-home"],
 #view-category:checked~.app-container .sidebar label[for="view-category"],
 #view-list:checked~.app-container .sidebar label[for="view-list"],
@@ -378,7 +378,7 @@ h4 {
     border: 1px solid var(--border-color);
 }
 
-/* Calendar Header */
+/* ส่วนหัวปฏิทิน */
 .calendar-header {
     display: flex;
     justify-content: space-between;
@@ -452,7 +452,7 @@ h4 {
     box-shadow: var(--shadow-md);
 }
 
-/* Active year/month buttons */
+/* ปุ่มปี/เดือนที่เลือก */
 #year-2568:checked~.app-container .year-btn[for="year-2568"],
 #year-2567:checked~.app-container .year-btn[for="year-2567"],
 #year-2566:checked~.app-container .year-btn[for="year-2566"] {
@@ -484,7 +484,7 @@ h4 {
     text-align: center;
 }
 
-/* Calendar Grid */
+/* ตารางปฏิทิน */
 .calendar-grid {
     background: var(--white);
     border-radius: 12px;
@@ -544,7 +544,7 @@ h4 {
     transform: scale(1.05);
 }
 
-/* Event Cards */
+/* การ์ดกิจกรรม */
 .event-cards {
     display: grid;
     gap: 1.5rem;
