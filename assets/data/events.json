@@ -1,0 +1,352 @@
+[
+  {
+    "id": 1,
+    "title": "วันเปิดภาคเรียนที่ 1/2568",
+    "date": "2568-01-15",
+    "category": "academic",
+    "description": "วันเริ่มต้นภาคเรียนที่ 1 ปีการศึกษา 2568",
+    "location": "มหาวิทยาลัยราชภัฏสวนสุนันทา",
+    "organizer": "สำนักทะเบียนและประเมินผล",
+    "status": "confirmed"
+  },
+  {
+    "id": 2,
+    "title": "วันปฐมนิเทศนักศึกษาใหม่",
+    "date": "2568-01-20",
+    "category": "student",
+    "description": "การปฐมนิเทศและแนะแนวสำหรับนักศึกษาใหม่",
+    "location": "หอประชุมใหญ่",
+    "organizer": "กองพัฒนานักศึกษา",
+    "status": "confirmed"
+  },
+  {
+    "id": 3,
+    "title": "วันขึ้นปีใหม่",
+    "date": "2568-01-01",
+    "category": "holiday",
+    "description": "วันหยุดราชการ วันขึ้นปีใหม่",
+    "location": "",
+    "organizer": "",
+    "status": "confirmed"
+  },
+  {
+    "id": 4,
+    "title": "การแข่งขันกีฬามหาวิทยาลัย",
+    "date": "2568-02-15",
+    "category": "sports",
+    "description": "การแข่งขันกีฬาระหว่างคณะ",
+    "location": "สนามกีฬามหาวิทยาลัย",
+    "organizer": "กองพัฒนานักศึกษา",
+    "status": "confirmed"
+  },
+  {
+    "id": 5,
+    "title": "วันมาฆบูชา",
+    "date": "2568-02-13",
+    "category": "holiday",
+    "description": "วันหยุดราชการ วันมาฆบูชา",
+    "location": "",
+    "organizer": "",
+    "status": "confirmed"
+  },
+  {
+    "id": 6,
+    "title": "สัปดาห์วิทยาศาสตร์",
+    "date": "2568-03-10",
+    "category": "academic",
+    "description": "กิจกรรมส่งเสริมความรู้ด้านวิทยาศาสตร์",
+    "location": "คณะวิทยาศาสตร์และเทคโนโลยี",
+    "organizer": "คณะวิทยาศาสตร์และเทคโนโลยี",
+    "status": "confirmed"
+  },
+  {
+    "id": 7,
+    "title": "การฝึกอบรมเทคโนโลยีสารสนเทศ",
+    "date": "2568-03-20",
+    "category": "training",
+    "description": "การฝึกอบรมการใช้เทคโนโลยีสารสนเทศสำหรับบุคลากร",
+    "location": "ห้องคอมพิวเตอร์ อาคาร IT",
+    "organizer": "ศูนย์เทคโนโลยีสารสนเทศ",
+    "status": "confirmed"
+  },
+  {
+    "id": 8,
+    "title": "วันจักรี",
+    "date": "2568-04-06",
+    "category": "holiday",
+    "description": "วันหยุดราชการ วันจักรี",
+    "location": "",
+    "organizer": "",
+    "status": "confirmed"
+  },
+  {
+    "id": 9,
+    "title": "วันสงกรานต์",
+    "date": "2568-04-13",
+    "category": "holiday",
+    "description": "วันหยุดราชการ วันสงกรานต์",
+    "location": "",
+    "organizer": "",
+    "status": "confirmed"
+  },
+  {
+    "id": 10,
+    "title": "วันศิลปะและวัฒนธรรม",
+    "date": "2568-04-25",
+    "category": "sports",
+    "description": "งานแสดงศิลปะและวัฒนธรรมไทย",
+    "location": "หอประชุมใหญ่",
+    "organizer": "คณะมนุษยศาสตร์และสังคมศาสตร์",
+    "status": "confirmed"
+  },
+  {
+    "id": 11,
+    "title": "วันแรงงานแห่งชาติ",
+    "date": "2568-05-01",
+    "category": "holiday",
+    "description": "วันหยุดราชการ วันแรงงานแห่งชาติ",
+    "location": "",
+    "organizer": "",
+    "status": "confirmed"
+  },
+  {
+    "id": 12,
+    "title": "การสอบกลางภาค",
+    "date": "2568-05-15",
+    "category": "academic",
+    "description": "การสอบประเมินผลกลางภาคเรียน",
+    "location": "ห้องสอบต่างๆ",
+    "organizer": "สำนักทะเบียนและประเมินผล",
+    "status": "confirmed"
+  },
+  {
+    "id": 13,
+    "title": "วิสาขบูชา",
+    "date": "2568-05-12",
+    "category": "holiday",
+    "description": "วันหยุดราชการ วันวิสาขบูชา",
+    "location": "",
+    "organizer": "",
+    "status": "confirmed"
+  },
+  {
+    "id": 14,
+    "title": "งานวันเด็กแห่งชาติ",
+    "date": "2568-06-10",
+    "category": "student",
+    "description": "กิจกรรมวันเด็กแห่งชาติ",
+    "location": "บริเวณมหาวิทยาลัย",
+    "organizer": "กองพัฒนานักศึกษา",
+    "status": "confirmed"
+  },
+  {
+    "id": 15,
+    "title": "การประชุมวิชาการระดับชาติ",
+    "date": "2568-06-25",
+    "category": "academic",
+    "description": "การประชุมวิชาการและนำเสนอผลงานวิจัย",
+    "location": "หอประชุมใหญ่",
+    "organizer": "สำนักวิจัยและพัฒนา",
+    "status": "confirmed"
+  },
+  {
+    "id": 16,
+    "title": "วันศึกษาเพื่อชุมชน",
+    "date": "2568-07-15",
+    "category": "academic",
+    "description": "โครงการบริการวิชาการแก่ชุมชน",
+    "location": "ชุมชนท้องถิ่นต่างๆ",
+    "organizer": "สำนักวิจัยและพัฒนา",
+    "status": "confirmed"
+  },
+  {
+    "id": 17,
+    "title": "วันอาสาฬหบูชา",
+    "date": "2568-07-11",
+    "category": "holiday",
+    "description": "วันหยุดราชการ วันอาสาฬหบูชา",
+    "location": "",
+    "organizer": "",
+    "status": "confirmed"
+  },
+  {
+    "id": 18,
+    "title": "วันเข้าพรรษา",
+    "date": "2568-07-12",
+    "category": "holiday",
+    "description": "วันหยุดราชการ วันเข้าพรรษา",
+    "location": "",
+    "organizer": "",
+    "status": "confirmed"
+  },
+  {
+    "id": 19,
+    "title": "การสอบปลายภาค",
+    "date": "2568-08-01",
+    "category": "academic",
+    "description": "การสอบประเมินผลปลายภาคเรียน",
+    "location": "ห้องสอบต่างๆ",
+    "organizer": "สำนักทะเบียนและประเมินผล",
+    "status": "confirmed"
+  },
+  {
+    "id": 20,
+    "title": "วันแม่แห่งชาติ",
+    "date": "2568-08-12",
+    "category": "holiday",
+    "description": "วันหยุดราชการ วันแม่แห่งชาติ",
+    "location": "",
+    "organizer": "",
+    "status": "confirmed"
+  },
+  {
+    "id": 21,
+    "title": "วันปฐมนิเทศนักศึกษาใหม่ ภาคเรียนที่ 2",
+    "date": "2568-09-15",
+    "category": "student",
+    "description": "การปฐมนิเทศนักศึกษาใหม่ภาคเรียนที่ 2",
+    "location": "หอประชุมใหญ่",
+    "organizer": "กองพัฒนานักศึกษา",
+    "status": "confirmed"
+  },
+  {
+    "id": 22,
+    "title": "การแข่งขันกีฬาสี",
+    "date": "2568-09-25",
+    "category": "sports",
+    "description": "การแข่งขันกีฬาสีประจำปี",
+    "location": "สนามกีฬามหาวิทยาลัย",
+    "organizer": "กองพัฒนานักศึกษา",
+    "status": "confirmed"
+  },
+  {
+    "id": 23,
+    "title": "วันคล้ายวันพระราชสมภพรัชกาลที่ 7",
+    "date": "2568-10-23",
+    "category": "holiday",
+    "description": "วันหยุดราชการ วันคล้ายวันพระราชสมภพพระบาทสมเด็จพระบรมชนกาธิเบศร มหาภูมิพลอดุลยเดชมหาราช บรมนาถบพิตร รัชกาลที่ 7",
+    "location": "",
+    "organizer": "",
+    "status": "confirmed"
+  },
+  {
+    "id": 24,
+    "title": "งานรำลึกสถาปนามหาวิทยาลัย",
+    "date": "2568-10-15",
+    "category": "academic",
+    "description": "กิจกรรมรำลึกการสถาปนามหาวิทยาลัย",
+    "location": "บริเวณมหาวิทยาลัย",
+    "organizer": "สำนักงานอธิการบดี",
+    "status": "confirmed"
+  },
+  {
+    "id": 25,
+    "title": "การฝึกอบรมภาวะผู้นำ",
+    "date": "2568-11-05",
+    "category": "training",
+    "description": "การฝึกอบรมพัฒนาภาวะผู้นำสำหรับนักศึกษา",
+    "location": "ห้องประชุม อาคาร 1",
+    "organizer": "กองพัฒนานักศึกษา",
+    "status": "confirmed"
+  },
+  {
+    "id": 26,
+    "title": "วันลอยกระทง",
+    "date": "2568-11-15",
+    "category": "sports",
+    "description": "งานประเพณีลอยกระทง",
+    "location": "บึงในมหาวิทยาลัย",
+    "organizer": "กองพัฒนานักศึกษา",
+    "status": "confirmed"
+  },
+  {
+    "id": 27,
+    "title": "วันคล้ายวันพระราชสมภพรัชกาลที่ 9",
+    "date": "2568-12-05",
+    "category": "holiday",
+    "description": "วันหยุดราชการ วันคล้ายวันพระราชสมภพพระบาทสมเด็จพระบรมชนกาธิเบศร มหาภูมิพลอดุลยเดชมหาราช บรมนาถบพิตร รัชกาลที่ 9",
+    "location": "",
+    "organizer": "",
+    "status": "confirmed"
+  },
+  {
+    "id": 28,
+    "title": "วันรัฐธรรมนูญ",
+    "date": "2568-12-10",
+    "category": "holiday",
+    "description": "วันหยุดราชการ วันรัฐธรรมนูญ",
+    "location": "",
+    "organizer": "",
+    "status": "confirmed"
+  },
+  {
+    "id": 29,
+    "title": "การปิดภาคเรียนที่ 1/2568",
+    "date": "2568-12-20",
+    "category": "academic",
+    "description": "วันสิ้นสุดภาคเรียนที่ 1 ปีการศึกษา 2568",
+    "location": "มหาวิทยาลัยราชภัฏสวนสุนันทา",
+    "organizer": "สำนักทะเบียนและประเมินผล",
+    "status": "confirmed"
+  },
+  {
+    "id": 30,
+    "title": "วันสิ้นปี",
+    "date": "2568-12-31",
+    "category": "holiday",
+    "description": "วันหยุดราชการ วันสิ้นปี",
+    "location": "",
+    "organizer": "",
+    "status": "confirmed"
+  },
+  {
+    "id": 31,
+    "title": "การประกวดโครงงานนักศึกษา",
+    "date": "2568-11-20",
+    "category": "student",
+    "description": "การประกวดและแสดงผลงานโครงงานของนักศึกษา",
+    "location": "หอประชุมใหญ่",
+    "organizer": "สำนักวิจัยและพัฒนา",
+    "status": "confirmed"
+  },
+  {
+    "id": 32,
+    "title": "สัมมนาทางวิชาการ",
+    "date": "2568-03-25",
+    "category": "academic",
+    "description": "สัมมนาแลกเปลี่ยนความรู้ทางวิชาการ",
+    "location": "ห้องประชุม อาคาร 2",
+    "organizer": "คณะครุศาสตร์",
+    "status": "confirmed"
+  },
+  {
+    "id": 33,
+    "title": "การฝึกอบรมเทคโนโลยีการศึกษา",
+    "date": "2568-08-15",
+    "category": "training",
+    "description": "การฝึกอบรมการใช้เทคโนโลยีในการจัดการเรียนการสอน",
+    "location": "ห้องอบรม อาคาร IT",
+    "organizer": "ศูนย์เทคโนโลยีสารสนเทศ",
+    "status": "confirmed"
+  },
+  {
+    "id": 34,
+    "title": "งานแสดงดนตรี",
+    "date": "2568-09-10",
+    "category": "sports",
+    "description": "การแสดงดนตรีประจำปี",
+    "location": "หอประชุมใหญ่",
+    "organizer": "คณะมนุษยศาสตร์และสังคมศาสตร์",
+    "status": "confirmed"
+  },
+  {
+    "id": 35,
+    "title": "การประเมินคุณภาพการศึกษา",
+    "date": "2568-10-30",
+    "category": "academic",
+    "description": "การประเมินคุณภาพการศึกษาภายใน",
+    "location": "ห้องประชุมต่างๆ",
+    "organizer": "สำนักงานประกันคุณภาพการศึกษา",
+    "status": "confirmed"
+  }
+]
