@@ -1,65 +1,132 @@
-/* Detail View */
+/* Detail View Component */
 .event-detail {
     max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
 }
 
 .detail-card {
     background: var(--white);
-    border-radius: 16px;
-    padding: 2rem;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
-}
-
-.detail-card-secondary {
-    margin-top: 2rem;
+    width: 100%;
+    max-width: 100%;
 }
 
 .detail-card h4 {
-    font-size: 24px;
+    font-size: var(--font-size-xl);
     color: var(--text-dark);
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--spacing-lg);
     border-bottom: 2px solid var(--primary-pink);
-    padding-bottom: 0.5rem;
+    padding-bottom: var(--spacing-sm);
+    word-wrap: break-word;
 }
 
 .detail-info {
     display: grid;
-    gap: 1rem;
-    margin-bottom: 2rem;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
 }
 
 .info-item {
     display: grid;
-    grid-template-columns: 120px 1fr;
-    gap: 1rem;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xs);
     align-items: start;
 }
 
 .info-item strong {
     color: var(--text-dark);
     font-weight: 600;
+    font-size: var(--font-size-sm);
+}
+
+.info-item span {
+    color: var(--text-gray);
+    font-size: var(--font-size-sm);
 }
 
 .detail-actions {
     text-align: center;
-    margin-top: 2rem;
+    margin-top: var(--spacing-xl);
 }
 
 .add-calendar-btn {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 1rem 2rem;
+    gap: var(--spacing-xs);
+    padding: var(--spacing-md) var(--spacing-xl);
     background-color: var(--primary-pink);
     color: var(--white);
     text-decoration: none;
-    border-radius: 12px;
+    border-radius: var(--radius-md);
     font-weight: 600;
     transition: all 0.2s ease;
+    font-size: var(--font-size-sm);
+    border: none;
+    cursor: pointer;
 }
 
 .add-calendar-btn:hover {
     background-color: #e55a9a;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(240, 111, 170, 0.3);
+}
+
+.add-calendar-btn:focus {
+    outline: 2px solid var(--secondary-blue);
+    outline-offset: 2px;
+}
+
+/* About List Styles */
+.about-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-list li {
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    padding-left: var(--spacing-xl);
+    font-size: var(--font-size-sm);
+}
+
+.about-list li:last-child {
+    border-bottom: none;
+}
+
+.about-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-pink);
+    font-weight: bold;
+}
+
+/* Desktop Detail View */
+@media (min-width: 768px) {
+    .event-detail {
+        padding: 0;
+    }
+
+    .detail-card {
+        padding: var(--spacing-xl);
+    }
+
+    .detail-card h4 {
+        font-size: var(--font-size-2xl);
+    }
+
+    .info-item {
+        grid-template-columns: 120px 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .add-calendar-btn {
+        font-size: var(--font-size-base);
+        padding: var(--spacing-lg) var(--spacing-2xl);
+    }
 }

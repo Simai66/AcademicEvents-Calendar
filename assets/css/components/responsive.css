@@ -1,147 +1,169 @@
-/* Mobile Navigation */
-.mobile-nav {
-    display: none;
+/* Responsive Design - Additional Breakpoints */
+
+/* Small phones: 360px - 479px */
+@media (max-width: 479px) {
+    .calendar-container {
+        padding: var(--spacing-md);
+        margin: var(--spacing-xs);
+        border-radius: var(--radius-md);
+    }
+
+    .event-card {
+        padding: var(--spacing-md);
+        border-radius: var(--radius-md);
+    }
+
+    .year-btn,
+    .month-btn {
+        min-width: 40px;
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+
+    .day-cell {
+        min-height: 25px;
+        font-size: 0.7rem;
+    }
+
+    .weekday {
+        padding: var(--spacing-xs);
+        font-size: 0.7rem;
+    }
 }
 
-@media (max-width: 1024px) {
-    .app-container {
-        grid-template-columns: 200px 1fr;
-    }
-
-    .sidebar {
-        width: 200px;
-        padding: 1rem;
-    }
-
-    .main-content {
-        margin-left: 200px;
-    }
-
-    .footer {
-        margin-left: 200px;
-    }
-
-    .brand-name {
-        font-size: 20px;
-    }
-}
-
-@media (max-width: 768px) {
-    .app-container {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto 1fr auto;
-        margin: 0;
-        border-radius: 0;
-    }
-
-    .sidebar {
-        position: relative;
-        width: 100%;
-        height: auto;
-        display: none;
-    }
-
-    .mobile-nav {
-        display: block;
-        position: fixed;
-        top: 1rem;
-        left: 1rem;
-        z-index: 1000;
-        background: var(--primary-pink);
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    .mobile-nav-toggle {
-        padding: 1rem;
-        cursor: pointer;
-        color: var(--text-dark);
-        font-weight: 600;
-        list-style: none;
-    }
-
-    .mobile-nav-toggle::-webkit-details-marker {
-        display: none;
-    }
-
-    .mobile-nav-content {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--primary-pink);
-        border-radius: 0 0 12px 12px;
-        padding: 0.5rem;
-        display: flex;
-        flex-direction: column;
-        gap: 0.25rem;
-        min-width: 200px;
-    }
-
-    .mobile-nav-content .nav-item {
-        padding: 0.75rem;
-        border-radius: 8px;
-        white-space: nowrap;
-    }
-
-    .main-content {
-        grid-column: 1;
-        grid-row: 2;
-        margin-top: 4rem;
-        margin-left: 0;
-        border-top-left-radius: 0;
-    }
-
-    .main-content::before {
-        display: none;
-    }
-
+/* Medium phones: 480px - 767px */
+@media (min-width: 480px) and (max-width: 767px) {
     .hero {
-        padding: 2rem 1rem;
-        margin-top: 0;
+        min-height: 140px;
     }
 
     .calendar-container {
-        margin: 0.5rem;
-        padding: 1rem;
+        padding: var(--spacing-lg);
     }
 
-    .calendar-header {
-        flex-direction: column;
-        text-align: center;
+    .day-cell {
+        min-height: 35px;
+    }
+}
+
+/* Tablets: 768px - 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* Sidebar adjustments for tablets */
+    .sidebar {
+        width: 200px;
     }
 
-    .year-selector,
-    .month-selector {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .calendar-days {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .day-cell:nth-child(n+29) {
-        display: none;
-    }
-
-    .nav-buttons {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .nav-btn {
-        width: 100%;
-        text-align: center;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
+    .main-content {
+        margin-left: 200px;
     }
 
     .footer {
-        margin-left: 0;
+        margin-left: 200px;
+    }
+
+    :root {
+        --sidebar-w: 200px;
+    }
+}
+
+/* Small desktops: 1024px - 1279px */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .calendar-container {
+        padding: var(--spacing-2xl);
+    }
+
+    .event-cards {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+}
+
+/* Large desktops: 1280px - 1439px */
+@media (min-width: 1280px) and (max-width: 1439px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    .event-cards {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+}
+
+/* Extra large screens: 1440px+ */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .calendar-container {
+        max-width: 1200px;
+        margin: 0 auto var(--spacing-xl) auto;
+    }
+
+    .event-cards {
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    }
+}
+
+/* Landscape orientation adjustments */
+@media (orientation: landscape) and (max-height: 500px) {
+    .hero {
+        min-height: 100px;
+        padding: var(--spacing-md);
+    }
+
+    .mobile-nav {
+        top: var(--spacing-xs);
+        left: var(--spacing-xs);
+    }
+}
+
+/* Print styles */
+@media print {
+
+    .sidebar,
+    .mobile-nav,
+    .nav-item,
+    .filter-controls {
+        display: none !important;
+    }
+
+    .main-content {
+        margin-left: 0 !important;
+        grid-column: 1 !important;
+    }
+
+    .footer {
+        margin-left: 0 !important;
+        grid-column: 1 !important;
+    }
+
+    * {
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .logo img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Dark mode preference */
+@media (prefers-color-scheme: dark) {
+    /* Note: Variables would need to be updated for dark mode */
+    /* This is a placeholder for future dark mode implementation */
+}
+
+/* Hover capability detection */
+@media (hover: none) {
+
+    .nav-item:hover,
+    .event-card:hover,
+    .day-cell:hover {
+        transform: none;
     }
 }
