@@ -1,0 +1,28 @@
+/**
+ * Academic Events Calendar - Main CSS File
+ * This file imports all modular CSS components
+ */
+
+/* CSS Variables and Themes */
+@import url('components/variables.css');
+@import url('components/themes.css');
+
+/* Base Styles */
+@import url('components/base.css');
+
+/* Layout Components */
+@import url('components/layout.css');
+@import url('components/sidebar.css');
+@import url('components/main.css');
+
+/* Feature Components */
+@import url('components/calendar.css');
+@import url('components/events.css');
+@import url('components/filter.css');
+@import url('components/detail.css');
+
+/* UI Components */
+@import url('components/footer.css');
+
+/* Responsive Design */
+@import url('components/responsive.css');

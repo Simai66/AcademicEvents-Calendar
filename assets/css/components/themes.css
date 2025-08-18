@@ -1,0 +1,118 @@
+/* CSS Variables and Themes */
+:root {
+    /* Primary Colors */
+    --primary-pink: #f06faa;
+    --secondary-blue: #3f458d;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+
+    /* Background Colors */
+    --background: #f8fafc;
+    --background-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --border-color: #e2e8f0;
+
+    /* Text Colors */
+    --text-dark: #1a202c;
+    --text-gray: #4a5568;
+    --text-light: #a0aec0;
+    --white: #ffffff;
+    --light-gray: #f7fafc;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    /* Category Colors */
+    --category-academic: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    --category-student: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    --category-holiday: linear-gradient(135deg, #ef4444, #dc2626);
+    --category-training: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    --category-sports: linear-gradient(135deg, #f59e0b, #d97706);
+
+    /* Transition and Animation */
+    --transition-fast: 0.15s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-2xl: 24px;
+    --radius-full: 50%;
+}
+
+/* Dark theme support (for future implementation) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #1a202c;
+        --text-dark: #f7fafc;
+        --text-gray: #e2e8f0;
+        --text-light: #a0aec0;
+        --white: #2d3748;
+        --light-gray: #2d3748;
+        --border-color: #4a5568;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-pink: #d63384;
+        --secondary-blue: #0d6efd;
+        --text-dark: #000000;
+        --text-gray: #333333;
+        --border-color: #000000;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --transition-fast: none;
+        --transition-normal: none;
+        --transition-slow: none;
+    }
+    
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Print styles */
+@media print {
+    :root {
+        --primary-pink: #000000;
+        --secondary-blue: #000000;
+        --gradient-primary: none;
+        --gradient-secondary: none;
+        --gradient-accent: none;
+        --background: #ffffff;
+        --text-dark: #000000;
+        --text-gray: #000000;
+        --white: #ffffff;
+        --shadow-sm: none;
+        --shadow-md: none;
+        --shadow-lg: none;
+        --shadow-xl: none;
+    }
+}
