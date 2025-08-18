@@ -1,8 +1,9 @@
-/* รีเซ็ตและสไตล์พื้นฐาน */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+    /* รีเซ็ตและสไตล์พื้นฐาน */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
 }
 
 html {
@@ -1285,4 +1286,4 @@ input:focus,
         text-align: center;
         gap: 0.5rem;
     }
-}
+} 
