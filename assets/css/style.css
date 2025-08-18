@@ -997,7 +997,6 @@ h4 {
     .main-content {
         grid-column: 1;
         grid-row: 2;
-        margin-top: 4rem;
         margin-left: 0;
         border-top-left-radius: 0;
         /* Add space for mobile nav */
@@ -1030,24 +1029,13 @@ h4 {
 
     /* Show only first 4 days on mobile for calendar */
     .calendar-days {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(7, 1fr);
     }
 
     .weekday-header {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(7, 1fr);
     }
-
-    .weekday:nth-child(n+5) {
-        display: none;
-    }
-
-    .day-cell:nth-child(4n+5),
-    .day-cell:nth-child(4n+6),
-    .day-cell:nth-child(4n+7),
-    .day-cell:nth-child(4n+1):nth-child(n+29) {
-        display: none;
-    }
-
+    
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
