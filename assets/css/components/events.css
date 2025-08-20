@@ -7,6 +7,75 @@
     padding: 0 var(--spacing-md);
 }
 
+/* Event Article Styles */
+.event {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.event::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--gradient-primary);
+    transition: width 0.3s ease;
+}
+
+.event:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: rgba(102, 126, 234, 0.3);
+}
+
+.event:hover::before {
+    width: 6px;
+}
+
+.event-title {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.event-title a {
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.event-title a:hover {
+    color: var(--primary-pink);
+}
+
+.event-meta {
+    color: var(--text-gray);
+    font-size: 0.875rem;
+    margin: 0 0 0.75rem 0;
+    font-weight: 500;
+}
+
+.event-desc {
+    color: var(--text-gray);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
 .event-card {
     background: var(--white);
     border: 1px solid var(--border-color);
