@@ -1086,8 +1086,7 @@ input:focus {
 
     .footer {
         grid-column: 2;
-        grid-row: 2;
-        margin-left: var(--sidebar-w);
+        grid-row: 3;
     }
 
     .footer-content {

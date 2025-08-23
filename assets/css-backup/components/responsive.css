@@ -148,12 +148,6 @@
     }
 }
 
-/* Dark mode preference */
-@media (prefers-color-scheme: dark) {
-    /* Note: Variables would need to be updated for dark mode */
-    /* This is a placeholder for future dark mode implementation */
-}
-
 /* Hover capability detection */
 @media (hover: none) {
 
